@@ -1,0 +1,2971 @@
+/*
+Theme Name: houseyourplants-new
+Theme URI:
+Author: wes
+Author URI:
+Description: houseyourplants website
+Version: 1.0.0
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Links
+	## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+	## Posts and pages
+	## Comments
+# Infinite scroll
+# Media
+	## Captions
+	## Galleries
+--------------------------------------------------------------*/
+
+/*COLOURS*/
+
+/*	HEADER background: 	#f1f1f1	light grey
+		BODY text color: 		#666 dark grey
+		button purple:			#8f425a
+*/
+
+
+/*--------------------------------------------------------------
+#
+--------------------------------------------------------------*/
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+	color: #404040;
+	font-family: Rosario, Lato, sans-serif;
+	font-size: 16px;
+	font-size: 1em;
+	line-height: 1.5;
+}
+
+footer {
+	clear: both;
+	width: 100%;
+}
+
+
+dfn,
+cite,
+em,
+i {
+	font-style: italic;
+}
+
+blockquote {
+	border-left: 7px solid #b21f1f;
+	padding-left: 15px;
+  margin: 15px 0;
+}
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1em 0;
+  padding: 0.5em;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+blockquote:before {
+  color: #000;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.6em;
+	font-family: Gill Sans;
+}
+
+blockquote:after {
+    visibility: hidden;
+    color: #111;
+    content: close-quote;
+    font-size: 4em;
+    line-height: 0;
+    vertical-align: -0.4em;
+}
+
+blockquote p {
+	font-size: 1.1rem;
+	line-height: 1.7;
+	width: 90%;
+}
+address {
+	margin: 0 0 1.5em;
+}
+
+pre {
+	background: #eee;
+	font-family: "Courier 10 Pitch", Courier, monospace;
+	font-size: 15px;
+	font-size: 0.9375rem;
+	line-height: 1.6;
+	margin-bottom: 1.6em;
+	max-width: 100%;
+	overflow: auto;
+	padding: 1.6em;
+}
+
+code,
+kbd,
+tt,
+var {
+	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+	font-size: 15px;
+	font-size: 0.9375rem;
+}
+
+abbr,
+acronym {
+	border-bottom: 1px dotted #666;
+	cursor: help;
+}
+
+mark,
+ins {
+	background: #fff9c0;
+	text-decoration: none;
+}
+
+big {
+	font-size: 125%;
+}
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+html {
+	box-sizing: border-box;
+}
+body {
+	background: #fefcf2; /* Fallback for when there is no custom background color defined. */
+	background: #fffdf0;
+}
+
+.container {
+	max-width: 64rem;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+.site-header {
+	clear: both;
+	position: relative;
+}
+
+.heading-container {
+	width: 100%;
+}
+
+*,
+*:before,
+*:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+	box-sizing: inherit;
+}
+q:before,
+q:after {
+	content: "";
+}
+
+q {
+	quotes: "" "";
+}
+
+hr {
+	background-color: #ccc;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+
+ul,
+ol {
+	/*margin: 0 0 1.5em 0;*/
+}
+
+ul {
+	list-style: disc;
+}
+
+ol {
+	list-style: decimal;
+}
+
+li > ul,
+li > ol {
+	margin-bottom: 0;
+	/*margin-left: 1.5em;*/
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+	margin: 0 1.5em 1.5em;
+}
+
+img {
+	height: auto; /* Make sure images are scaled correctly. */
+	max-width: 100%; /* Adhere to container width. */
+}
+
+figure {
+	margin: 1em 0; /* Extra wide images within figure tags don't overflow the content area. */
+}
+
+table {
+	margin: 0 0 1.5em;
+	width: 100%;
+}
+
+@media(min-width: 1400px) {
+	.container {
+		max-width: 80rem;
+	}
+} /*end media query */
+
+/*social media area*/
+
+.social-media h4 {
+	text-align: center;
+	padding: 0 0 5px;
+	color: #8C6653; /*brown*/
+	font-weight: bold;
+}
+
+.social-media {
+	padding: 0 0 5px;
+}
+
+.secondary-nav ul,
+ul.social-media-icons {
+	text-align: center;
+	padding-left: 0;
+}
+
+.secondary-nav ul li,
+.social-media-icons li {
+ 	list-style-type: none;
+ 	display: inline-block;
+}
+
+.social-media-icons li {
+	padding: 0 10px;
+}
+
+/*----------------------------------
+TYPOGRAPHY
+-----------------------------------*/
+h1, h2, h3, h4, h5, h6 {
+	font-family: Rosario;
+	color: #9F3255;
+	clear: both;
+}
+
+h1 {
+	font-size: 2em;
+}
+
+h2 {
+	/*color: #8C6653;*/
+	font-size: 1.625em;
+}
+
+h2.page-title {
+	font-size: 1.4em;
+	padding-bottom: 20px;
+	text-transform: uppercase;
+}
+
+h2.plant-title {
+	color: #9f3255;
+	color: #fff;
+	font-weight: bold;
+	font-size: 1.8rem;
+	background: #7c8f39;
+	background: #627528;
+	padding: 2px 0;
+	margin: 0;
+}
+
+.plant-intro-section  h2.plant-title,
+.plant-intro-section span.scientific-name {
+	text-align: center;
+	display: block;
+	font-weight: normal;
+}
+
+h2.entry-title a {
+	letter-spacing: 1px;
+}
+
+h2 span.featured-plant-title {
+	border-bottom: 0;
+}
+
+span.scientific-name {
+	font-style: italic;
+	 padding: 2px 0;
+	 color: #4d5151;
+	 font-size: 1.2rem;
+	 margin: 0;
+	 text-align: center;
+	 background: #C3C7AC;
+	 background: #c8d4a5;
+}
+
+h3 {
+	font-size: 1.375em;
+}
+
+h3.section-title {
+	font-size: 2rem;
+	text-align: center;
+	margin-top: 10px;
+}
+
+h4 {
+	font-size: 1.275rem;
+}
+
+h4 span.plant-problem {
+	font-weight: bold;
+	font-size: 1.2em;
+	color: #656b6c;
+}
+
+p {
+	font-family: Lato, sans-serif;
+	font-size: 1.1rem;
+	padding-bottom: 10px;
+	color: #656b6c;
+}
+p:last-child {
+	padding-bottom: 0;
+}
+
+p.no-plants-found {
+	font-size: 1.25em;
+}
+
+h2 {
+	/*font-size: 1.3em;*/
+	/*padding-bottom: 1%;*/
+	font-weight: 700;
+}
+
+h2.page-title {
+	font-size: 1.5em;
+	margin-top: 5%;
+}
+
+
+h3 {
+	font-size: 1.2em;
+}
+
+/*LINKS*/
+h2.plant-title a {
+	font-size: 1.1em;
+}
+
+p {
+	font-family: Lato;
+	font-size: 1.1em;
+}
+
+p.copyright {
+	text-align: center;
+	font-size: 1rem;
+}
+
+p.scientific-name {
+	font-style: italic;
+	 padding: 0;
+}
+
+@media (min-width: 650px) {
+
+	h2 {
+		/*font-size: 1.4em;*/
+		font-weight: 700;
+	}
+
+	h2.page-title {
+		font-size: 1.6em;
+	}
+
+	h3 {
+		font-size: 1.2em;
+	}
+
+	/*LINKS*/
+	h2.plant-title a {
+		font-size: 1.1em;
+	}
+} /*end media query */
+
+@media (min-width: 710px) {
+
+	h3 {
+		font-size: 1.5em;
+	}
+} /*end media query */
+
+@media (min-width: 850px){
+	h2 {
+		font-size: 1.6em;
+		/*padding-bottom: 1%;*/
+		font-weight: 700;
+	}
+
+	h2.page-title {
+		font-size: 1.6em;
+	}
+
+	h2.entry-title a {
+		font-size: 1em;
+	}
+
+	h3 {
+		font-size: 1.3em;
+		/*color: #6b2428;
+		color: #8f2849;*/
+	}
+
+	h4 span.plant-problem {
+		font-weight: bold;
+		font-size: 1.3em;
+		color: #656b6c;
+	}
+} /*end media query */
+
+@media (min-width: 1020px) {
+
+	h1 {
+		font-size: 3em;
+	}
+
+	h2 {
+		font-size: 2.25em;
+	}
+
+	h3 {
+		font-size: 1.75em;
+	}
+
+	p {
+		font-size: 1.2rem;
+	}
+
+	h1 {
+		font-size: 1.9em;
+	}
+
+	h2 {
+		font-size: 1.5em;
+		/*padding-bottom: 1%;*/
+		font-weight: 700;
+	}
+
+	h2.page-title {
+		font-size: 1.8em;
+	}
+
+	h2.plant-title {
+		font-size: 1.85em;
+	}
+
+	h3 {
+		font-size: 1.6em;
+		/*color: #6b2428;
+		color: #8f2849;*/
+	}
+
+	.plant-intro-section  h2.plant-title,
+	.plant-intro-section span.scientific-name {
+		/*text-align: left;*/
+		display: block;
+		width: 90%;
+		margin: auto;
+	}
+
+	/*quick care plant info*/
+
+	.plant-info h3 {
+		font-size: 1.3em;
+	}
+
+	.quick-care-info p {
+		font-size: 1.35em;
+	}
+	/*LINKS*/
+	h2.plant-title a {
+		font-size: 1.1em;
+	}
+	.what-next {
+		width: 90%;
+		margin: 0 auto;
+	}
+} /*end media query */
+
+@media(min-width: 2000px) {
+	h2.page-title {
+		font-size: 2.7em;
+	}
+} /*end media query */
+
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+
+.wpcf7 {
+	max-width: 90%;
+}
+
+/*contact form validation messages
+-- generic positiong styling*/
+div.wpcf7-response-output {
+	margin: 1.5rem 0;
+	padding: 1rem;
+}
+/*sent ok*/
+div.wpcf7-mail-sent-ok {
+	border: none;
+	background: #93a97d;
+	color: #fff;
+}
+/*validation errors*/
+div.wpcf7-validation-errors {
+	font-size: 1.1rem;
+	border: 2px solid #b21f1f;
+	background: #b21f1f;
+	color: #fff;
+}
+
+/*alert tip for validation error*/
+
+span.wpcf7-not-valid-tip {
+	color: #b21f1f;
+}
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	border: 1px solid;
+	border-color: #ccc #ccc #bbb;
+	border-color: #fff;
+	/*border-radius: 3px;*/
+	background: #e6e6e6;
+	color: rgba(0, 0, 0, .8);
+	font-size: 12px;
+	font-size: 1.2rem;
+	line-height: 1.5;
+	padding: .4em 0.5rem .4em;
+	width: 100%;
+	/*max-width: 200px;*/
+	margin: auto;
+}
+
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+	border-color: #ccc #bbb #aaa;
+	border-color: #ddd;
+}
+
+button:focus,
+input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus,
+button:active,
+input[type="button"]:active,
+input[type="reset"]:active,
+input[type="submit"]:active {
+	border-color: #aaa #bbb #bbb;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+	color: #666;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	padding: 3px;
+}
+
+select {
+	/*border: 1px solid #ccc;*/
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+input[type="range"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="week"]:focus,
+input[type="time"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="color"]:focus,
+textarea:focus {
+	color: #111;
+}
+
+textarea {
+	width: 100%;
+}
+
+label {
+	font-family: Lato;
+	display: block;
+	max-width: 350px;
+	font-size: 1.15em;
+	color: #fff;
+	padding: 2px 6px;
+	padding: 12px 6px 8px;
+	letter-spacing: 1px;
+	/* font-weight: bold; */
+	/*margin-bottom: 2%;*/
+	/*background: rgba(31,16,10,.65);*/
+}
+
+.form-select {
+   background: url(images/select-down-arrow.png) no-repeat 95% 0;
+   overflow: hidden;
+   width: 240px;
+	 background-color: #779126;
+	 background-color: #627528;
+	 vertical-align: middle;
+	 border: 2px solid rgba(0, 0, 0, 0.65);
+	 color: #FFF;
+}
+.form-select:hover {
+	border: 2px solid #fff;
+}
+.form-select select {
+	font-family: Lato;
+   background: transparent;
+   border: none;
+   font-size: 17px;
+	 font-size: 20px;
+	 font-size: 23px;
+   height: 34px;
+	 height: 38px;
+   /*padding: 7px;*/
+   width: 268px;
+	 color: #fff;
+	 margin: 0;
+	 /*letter-spacing: 1px;*/
+}
+
+@media(min-width: 900px) {
+
+	label {
+		display: block;
+		max-width: 380px;
+		/*font-size: 1em;*/
+	}
+} /*end media query */
+
+@media(min-width: 1000px) {
+	label {
+		/*font-size: 1.2em;*/
+	}
+} /*end media query */
+
+@media(min-width: 1800px) {
+	.form-select select {
+	   background: transparent;
+	   border: none;
+	   font-size: 20px;
+		 font-size: 20px;
+	   height: 40px;
+	   /*padding: 7px;*/
+	   width: 268px;
+		 color: #fff;
+	}
+} /*end media query */
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+
+.main-navigation ul {
+	display: none;
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+	/* width: 100%; */
+}
+
+.main-navigation a {
+	margin-right: 25px;
+}
+
+/*add transition to drop down child elements*/
+.main-navigation li ul {
+	visibility: hidden;
+	opacity: 0;
+	transition: 400ms ease-in;
+	filter: alpha (opacity=0);
+}
+.main-navigation ul > li:hover ul {
+	visibility: visible;
+	opacity: 1;
+	filter: alpha(opacity=100);
+	background: #f1f1f1;
+}
+/*end transitions*/
+
+.main-navigation ul ul {
+	/*box-shadow: 0 3px 3px rgba(0, 0, 0, 0.7);*/
+	float: left;
+	position: absolute;
+	top: 100%;
+	left: -999em;
+	z-index: 99999;
+	border-bottom: 1px solid #333;
+}
+
+.main-navigation ul ul ul {
+	left: -999em;
+	top: 0;
+}
+
+.main-navigation ul ul a {
+	display: block;
+	/* width: 150px; */
+}
+
+/*submenu*/
+.main-navigation ul ul li {
+	display: block;
+	/*background: #ddd;*/
+}
+
+.main-navigation li:hover > a,
+.main-navigation li.focus > a {
+	color: #333;
+}
+
+.main-navigation ul ul :hover > a,
+.main-navigation ul ul .focus > a {
+}
+
+.main-navigation ul ul a:hover,
+.main-navigation ul ul a.focus {
+
+}
+
+.main-navigation ul li:hover > ul,
+.main-navigation ul li.focus > ul {
+	left: auto;
+}
+
+.main-navigation ul ul li:hover > ul,
+.main-navigation ul ul li.focus > ul {
+	left: 100%;
+}
+
+.main-navigation .current_page_item > a,
+.main-navigation .current-menu-item > a,
+.main-navigation .current_page_ancestor > a,
+.main-navigation .current-menu-ancestor > a {
+	background: #000;
+}
+
+.main-navigation .active,
+.main-navigation .active > a,
+.main-navigation .active > a:hover {
+	border-bottom: 2px solid #9f3255;
+	/*background: #7c8f39;*/
+	/*color: #fff;*/
+	color: #fff;
+}
+
+/*add indicator for submenus*/
+.menu li.has-children > a:after {
+ color: #000;
+ content: ' ▼';
+ font-size: 12px;
+ vertical-align: 1px;
+}
+.menu li li.has-children > a:after {
+ color: #000;
+ content: ' ►';
+ font-size: 12px;
+ vertical-align: 1px;
+}
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+	display: block;
+	margin: 20px auto;
+	background:  #9f3255;/*purple*/
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 1rem;
+	font-weight: bold;
+	letter-spacing: 1px;
+	padding: 10px 0;
+}
+
+.site-branding {
+	width: 70%;
+	margin: auto;
+}
+
+.site-branding h1 a img {
+	/*display: inline-block;
+	margin: auto;
+	width: 350px;*/
+	display: block;
+	width: 200px;
+	margin: auto;
+}
+.site-branding h1 a img:hover {
+transform: perspective(500px) translate3d(0px ,0px, 20px);
+ /* transform: rotate(90deg);
+transform-origin: 50px 50px;
+transform: scaleX(-1); */
+}
+
+.site-navigation {
+	clear: both;
+	width: 100%;
+}
+
+/*--------------------------------------------------------------
+## Menus and navigation
+--------------------------------------------------------------*/
+
+nav ul li {
+	list-style-type: none;
+}
+
+nav ul li a {
+	transition: .25s ease;
+}
+nav ul li a,
+nav ul li a:visited,
+nav ul li a:active {
+	text-decoration: none;
+	display: block;
+	font-size: 1.1em;
+	width: 100%;
+	font-family: Lato;
+	padding: 15px 0;
+	color: #fff; /*darker green */
+	border-bottom: none;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-align: center;
+	letter-spacing: 1px;
+}
+
+.menu-main-nav-container {
+	text-align: right;
+}
+
+@media (min-width:710px) {
+	nav ul li a,
+	nav ul li a:visited {
+	color: #506d37; /*darker green */
+	}
+
+	.main-navigation .active,
+	.main-navigation .active > a,
+	.main-navigation .active > a:hover {
+		border-bottom: 2px solid #9f3255;
+		color: #9f3255;
+	}
+
+	.site-branding h1 a img {
+		margin: 0;
+	}
+
+	ul.nav-menu {
+		display: inline-block;
+		float: right;
+		margin-top: 55px;
+	}
+
+	ul#primary-menu li {
+		display: inline-block;
+		text-align: right;
+	}
+
+	.site-branding {
+		width: 20%;
+		float: left;
+	}
+	.main-navigation {
+		clear: none;
+		width: 80%;
+		float: right;
+	}
+
+	.menu-toggle {
+		display: none;
+	}
+	.main-navigation ul {
+		display: block;
+	}
+	.main-navigation li {
+		float: left;
+	}
+} /* end media 710px */
+
+@media(min-width: 850px) {
+
+	ul.nav-menu {
+		margin-top: 70px;
+	}
+	.main-navigation {
+		width: 79%;
+		float: right;
+	}
+
+	ul.nav-menu {
+		/*margin-top: 100px;*/
+	}
+} /*end media query */
+
+@media(min-width: 1000px) {
+	nav ul li a {
+		font-size: 1.35rem;
+	}
+	ul.nav-menu {
+		/*margin-top: 110px;*/
+	}
+} /*end media query */
+
+@media(min-width: 1200px) {
+
+		.navigation {
+			max-width: 64rem;
+		}
+		nav ul li {
+			margin-left: 10px;
+			margin-right: 0;
+		}
+		nav ul li a {
+			/* font-size: 1.5rem; */
+		}
+} /*end media query 1200px */
+
+@media(min-width: 1800px) {
+	nav ul li a {
+		font-size: 1.25rem;
+	}
+} /*end media query */
+
+.secondary-nav ul li {
+	display: block;
+}
+.secondary-nav ul li a  {
+	margin: 0 auto 2%;
+}
+.secondary-nav ul li a,
+.social-media li a,
+.secondary-nav ul li a:visited  {
+ 	font-size: 1.1em;
+ 	color: #506d37;
+ 	display: inline-block;
+ 	font-weight: bold;
+ 	width: 100%;
+ 	padding: 1% 0;
+ 	border-bottom: none;
+}
+
+.secondary-nav ul li a:hover,
+.secondary-nav ul li a:focus {
+	color: #465936 ;
+	color: #8f425a; /*purple*/
+	border-bottom: none;
+}
+
+/*--------------------------------------------------------------
+## Links
+--------------------------------------------------------------*/
+a, a:visited {
+	color: #506d37;
+	text-decoration: none;
+	font-size: 1.1em;
+	border-bottom: 2px solid #698650;
+	/*display: block;*/
+	-webkit-transition: color .3s ease;
+	-moz-transition: color .3s ease;
+	-ms-transition: color .3s ease;
+	-o-transition: color .3s ease;
+	transition: color .3s ease;
+}
+
+a:hover,
+a:focus,
+a:active {
+	color: #8f425a; /*purple*/
+}
+
+a:focus {
+	outline: thin dotted;
+}
+
+a:hover,
+a:active {
+	outline: 0;
+}
+
+a.button,
+a.button:visited {
+
+	margin: 2% 0;
+	max-width: 270px;
+	padding: 1%;
+	background: #84a06a;
+	background: #6d8656;
+	border: 0;
+	display: block;
+	/*width: 175px;*/
+	color: #fff;
+	cursor: pointer;
+	font-size: 1.2em;
+	border: 3px solid #98af83;
+	transition: .35s ease-in;
+}
+
+a.button:hover,
+a.button:active,
+a.button:focus {
+	background: #8f425a;
+	border: 3px solid #9d4863;
+}
+
+/*Post and page navigation*/
+
+/*posts*/
+div.post-navigation {
+	/*padding-top: 10px;*/
+	/*border-top: 3px solid #ddd;*/
+}
+
+span.post-navigation-title {
+	display: block;
+	text-align: center;
+}
+.site-main .comment-navigation,
+.site-main .posts-navigation,
+.site-main .post-navigation {
+	margin: 1em auto 1.5em;
+	overflow: hidden;
+}
+
+@media (min-width: 37em) {
+	.site-main .comment-navigation,
+	.site-main .posts-navigation,
+	.site-main .post-navigation {
+		width: 80%;
+	}
+} /*end media query */
+
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous {
+	float: left;
+	width: 50%;
+}
+
+.comment-navigation .nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next {
+	float: right;
+	text-align: right;
+	width: 50%;
+}
+
+/*pages*/
+.pagination h3 {
+	margin-bottom: 0;
+}
+.nav-links {
+	margin: 0 0 20px;
+}
+
+span.current, a.page-numbers {
+	font-size: 2rem;
+	padding: 3px;
+	margin-right: 5px;
+	text-decoration: none;
+}
+a.next, a.prev {
+	font-size: 1.5rem;
+}
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.5em;
+}
+
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.5em;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*--------------------------------------------------------------
+# Clearings
+--------------------------------------------------------------*/
+.clear:before,
+.clear:after,
+.entry-content:before,
+.entry-content:after,
+.comment-content:before,
+.comment-content:after,
+.site-header:before,
+.site-header:after,
+.site-content:before,
+.site-content:after,
+.site-footer:before,
+.site-footer:after {
+	content: "";
+	display: table;
+	table-layout: fixed;
+}
+
+.clear:after,
+.entry-content:after,
+.comment-content:after,
+.site-header:after,
+.site-content:after,
+.site-footer:after {
+	clear: both;
+}
+
+/*clearfix*/
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  zoom: 1; /* ie 6/7 */
+}
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+.sticky {
+	display: block;
+}
+
+.hentry {
+	margin: 0 0 1.5em;
+}
+
+.updated:not(.published) {
+	display: none;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 1.5em 0 0;
+}
+
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+.results,
+.post-navigation {
+	width: 100%;
+	margin: 0 auto;
+}
+
+.what-do-now {
+	background: #f8f6ea;
+	clear: both;
+	padding: 20px 0;
+	/*border-top: 2px dotted #e2e2c6;*/
+	/*padding-top: 20px;*/
+}
+
+.results p {
+	font-size: 1.2em;
+}
+
+/************************************************************************
+	WHAT DO YOU WANT TO DO NOW STYLING
+ ************************************************************************/
+/*arrow styling for what now */
+
+img.arrow {
+	vertical-align: middle;
+	padding: 5px;
+}
+
+ul.where-now {
+	list-style-type: none;
+	text-align: center;
+	padding: 0;
+}
+
+ul.where-now li {
+	/*padding-bottom: 5px;
+	margin-left: -25px;
+	margin-bottom: 13px;*/
+	display: inline-block;
+}
+
+ul.where-now li a,
+a.search-link {
+	border-bottom: 1px solid #698650;
+	padding: 2px 0;
+	transition: .4s ease;
+	font-size: 1.25em;
+	display: block;
+	text-align: center;
+	font-weight: bold;
+}
+ul.where-now li a:first-child {
+	margin-right: 10px;
+}
+
+ul.where-now li a:hover,
+ul.where-now li a:focus,
+a.search-link:hover {
+	color: #8f425a;
+	/*border-bottom: 2px solid #8f425a;*/
+	/*border-top: 3px solid #799d58;*/
+}
+
+/*error message when no plants found*/
+.no-plants-found {
+	clear: both;
+	width: 100%;
+	/*font-size: 1.3em;*/
+}
+
+
+/*********************************************************************
+	POST PAGINATION STYLING
+ *******************************************************************/
+
+.post-navigation {
+	clear: both;
+	width: 100%;
+	/*margin: 5% 0 0;*/
+	/*padding-top: 2%;*/
+	/*border-top: 3px solid #e2e2c6;*/
+	/*border-bottom: 3px solid #e2e2c6;*/
+}
+
+.post-navigation h2 {
+	text-align: center;
+}
+
+/*individual page numbers*/
+.post-navigation a,
+.post-navigation .current,
+a.page-numbers {
+	color: #5d7449;
+	font-size: 1.2em;
+	background: #5d7449;
+	padding: 5px 10px;
+	color: #fff;
+	border-bottom: none;
+	/*border-radius: 10px;*/
+	display: inline-block;
+}
+
+a.page-numbers:hover,
+a.page-numbers:focus {
+	background: #8f425a;
+	color: #fff;
+}
+
+/*styles the current page nav*/
+span.page-numbers.current {
+	font-size: 1.2em;
+	font-family: Lato;
+}
+
+.post-navigation .current {
+	background: #c1d0b4;
+	/*border-radius: 10px;*/
+}
+
+/*post navigation styling*/
+
+nav.navigation,
+nav.pagination {
+	width: 100%;
+	float: left;
+	padding: 0 0 2%;
+	/*border-bottom: 3px solid #e2e2c6;*/
+}
+
+.nav-links {
+	text-align: center;
+	width: 95%;
+	margin: auto;
+}
+
+/*the text that goes before each page number*/
+a.prev, a.next {
+	font-size: 1.2em;
+	color: #5d7449;
+	background: none;
+	padding: 10px;
+	border-bottom: none;
+	/*color: #fff;*/
+}
+
+.meta-nav, .screen-reader-text {
+	font-family: Lato;
+}
+
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+/****************************************************************
+	404 <530px
+ ***************************************************************/
+
+.error-404 {
+	width: 90%;
+	margin: 5% auto;
+}
+
+/**********************************************************
+	HOME PAGE <530px
+ **************************************************************/
+
+.homepage-introduction {
+	background: url(images/houseplant.jpg) 50% 50%  no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 500px;
+	position: relative;
+}
+.welcome-message {
+	position: absolute;
+	top: 50%;
+  transform: translateY(-50%);
+	background-color: rgba(63, 55, 54, 0.63);
+	border: 1px solid #7D896E;
+	text-align: left;
+	padding: 20px;
+}
+
+.welcome-message  h2,
+.welcome-message  h3,
+.welcome-message  p {
+	color: #fff;
+}
+
+.welcome-message h2 {
+	margin-top: 1%;
+	padding: 1% 3%;
+	font-size: 1.7em;
+	font-weight: normal;
+}
+
+.welcome-message h3 {
+	padding: 1% 3% 0%;
+	font-size: 1.25em;
+	font-weight: normal;
+}
+
+.welcome-message p {
+	margin-top: 2%;
+	padding: 0 0 1% 3%;
+	font-size: 1.1em;
+}
+
+.welcome-message a.button {
+	margin: 5% 0 5% 2%;
+	font-size: 1.2em;
+}
+
+
+/***********************************************************************
+	HOME PAGE - WHY PLANTS & FEATURED PLANT
+ ******************************************************************/
+
+.homepage-content {
+	width: 100%;
+}
+
+.why-plants,
+.featured-plant {
+width: 90%;
+margin: 15% auto;
+}
+
+.latest-post {
+	/* border-left: 8px solid #943b55; */
+	/* border-top: 8px solid #943b55; */
+	/* border-bottom: 6px solid #943b55; */
+	padding: 25px 35px;
+	background: #943b55;
+}
+.latest-post .summary {
+	padding: 10px 0 20px 0;
+}
+.latest-post h3,
+.latest-post p {
+	color: #fff;
+	margin: 0;
+}
+
+
+.latest-post a {
+	border-bottom: none;
+}
+
+.latest-post img {
+	width: 100%;
+}
+
+.latest-post h2 {
+	margin: 0px;
+	letter-spacing: 1px;
+	font-size: 1.75rem;
+	/* margin-left: -20px;
+	padding-left: 20px; */
+	/* padding-top: 6px; */
+	padding-bottom: 25px;
+	background: #943b55;
+	color: #fff;
+	font-weight: normal;
+
+	/* transform: rotate(25deg);
+	transform-origin: top left 0; */
+	/* margin-left: -70px; */
+}
+.latest-post h3 {
+		border-top: 2px dotted #fff;
+		padding: 10px 0;
+}
+
+.latest-post h3:hover {
+	border-top: 2px solid #fff;
+}
+.latest-post h3:after {
+	content: '\25BA';
+    font-size: 24px;
+    margin-top: 6px;
+		margin-right: 20px;
+    padding: 0 0 10px 0;
+		color: #fff;
+		float: right;
+}
+
+.featured-plant-title {
+	display: block;
+	padding: 10px 0;
+}
+a.thumbnail-link {
+	border-bottom: none;
+	margin-left: -20px;
+}
+
+.featured-plant .wp-post-image,
+.featured-plant p {
+	margin: 2% 2% 0 0;
+	margin: 0;
+	float: none;
+}
+
+h2.plant-title a {
+	color: #9F3255;
+	font-size: 1em;
+}
+p.scientific-name {
+	font-style: italic;
+	 padding: 0;
+}
+
+.featured-plant a {
+	clear: left;
+	/* margin: 20px 0; */
+}
+
+@media(min-width: 700px) {
+	.why-plants {
+		max-width: 45%;
+		float: left;
+		margin: 5% 5% 5% 0;
+	}
+
+	.featured-plant {
+		width: 45%;
+		float: right;
+		margin: 5% 2.5%;
+	}
+} /*end media query */
+
+@media(min-width: 1200px) {
+
+	.featured-plant {
+		max-width: 45%;
+		float: right;
+		margin: 5% 5% 5% 0;
+	}
+
+	.why-plants p {
+		width: 100%;
+	}
+
+	.latest-post p {
+		width: 90%;
+	}
+	.featured-plant h3 {
+		font-weight: bold;
+		letter-spacing: 2px;
+		padding: 0;
+	}
+
+	/*fixes bug with a.button link collapsing*/
+	.latest-post a.button {
+		clear: both;
+		margin-top: 20px;
+		float: left;
+	}
+} /* end media query 1200px */
+
+/******************************************************************************
+	FIND YOUR PLANT PAGE
+ ***********************************************************************/
+.featured-plants-homepage .plantfinder-intro {
+	background-color: rgba(176,169, 152,.1);
+	background-color: #8a4155;
+	margin: 0;
+	padding: 10px;
+}
+.plantfinder-intro h2.entry-title {
+	color: #fff;
+	margin: 0;
+}
+
+.plantfinder-intro {
+	background-color: rgba(176,169,152,.1);
+	padding: 20px 0;
+}
+form select  {
+	/*-webkit-appearance:none; *//*remove all chrome styling */
+	outline: none;
+}
+
+form select option {
+	font-family: Lato;
+background-image:-webkit-linear-gradient(hsla(0,0%,100%,0), hsla(0,0%,100%,0));
+background-image:-o-linear-gradient(hsla(0,0%,100%,0), hsla(0,0%,100%,0));
+background-image:linear-gradient(hsla(0,0%,100%,0), hsla(0,0%,100%,0));
+}
+
+form {
+	max-width: 100%;
+}
+
+.searchform h2 {
+	font-size: 1.75rem;
+	font-weight: bold;
+	/*border-bottom: 2px solid #e2e2c6;*/
+	/*border-bottom: 2px solid #cacab6;*/
+	color: #9f3255;/*purple*/
+	color: #fff;
+	/*color: #fff;*/
+	margin: 0;
+	padding: 10px 0 10px 20px;
+	background: rgba(0, 0, 0, 0.14);
+	/*background: rgba(255, 255, 255, 0.74);*/
+	text-align: center;
+}
+
+.form-container {
+	background: url(images/dieffenbachia-bg.jpg) 50% 50% fixed no-repeat;
+  background-size: cover;
+  width: 100%;
+	padding-bottom: 1px;
+}
+
+.searchform-contents {
+	background-color: rgba(0, 0, 0, 0.65);
+	margin-top: 50px;
+	/* border: 2px solid #fff; */
+	padding: 25px;
+	/*display: flex;
+	flex-direction: row;*/
+}
+
+.searchform-contents > div {
+	/* width: 90%; */
+		width: 80%;
+		margin: 0 auto 25px;
+}
+.searchform-contents > div:first-child {
+	/*padding: 20px 0 0;*/
+}
+
+.searchform-contents > div.form-select {
+	width: 250px;
+	max-width: 500px;
+	margin-top: 3px;
+}
+
+input#search-button {
+	font-family: Lato;
+	display: block;
+	color: #fff;
+	background: #779126;
+	background: #8f425a;
+	font-size: 1.3rem;
+	transition: background-color .5s ease-in;
+	border: none;
+	/*width: 225px;*/
+	width: 100%;
+	text-align: center;
+	margin: 0px auto;
+	/*margin: 10px 0 0;*/
+	padding: 6px;
+	cursor: pointer;
+	border-radius: 0;
+	-webkit-appearance:none;
+}
+
+input#search-button:hover {
+	background: #779126; /*purple*/
+}
+
+
+@media(min-width: 600px) {
+	.plantfinder-intro {
+		margin-top: 20px;
+	}
+
+	.searchform-contents > div {
+		width: 50%;
+		margin: 0 auto 25px;
+	}
+
+	.searchform-contents > div .form-select {
+		width: 250px;
+		max-width: 200px;
+		max-width: 268px;
+		margin: auto;
+	}
+} /*end media query */
+
+@media (min-width: 720px) {
+	.plantfinder-intro h2 {
+		margin-bottom: 0;
+	}
+	.plantfinder-intro p {
+		width: 65%;
+		text-align: center;
+		margin: 20px auto 30px;
+		font-size: 1.425rem;
+	}
+	.form-container {
+		/*height: 400px;*/
+		padding: 30px 0 50px;
+	}
+
+	input#search-button {
+		width: 50%;
+		margin: 10px auto;
+		font-size: 1.45rem;
+		border: 2px solid rgba(0, 0, 0, 0.25);
+	}
+
+	label {
+		text-align: center;
+		margin: auto;
+	}
+} /* end media query 720px */
+
+@media(min-width: 900px) {
+	.searchform-contents > div,
+	.searchform-contents > div:first-child {
+		width: 30%;
+		width: 33%;
+		float: left;
+		/*padding-top: 135px;*/
+		margin-right: 2%;
+		margin-right: 0;
+		margin: auto;
+	}
+
+	.searchform-contents > div .form-select {
+		width: 250px;
+		max-width: 200px;
+		max-width: 268px;
+		margin: auto;
+	}
+
+	label {
+		text-align: center;
+		margin: auto;
+	}
+} /*end media query */
+@media (min-width: 1024px) {
+
+	.searchform-contents > div .form-select {
+		   background: url(images/select-down-arrow.png) no-repeat 95% 0;
+		   overflow: hidden;
+		   width: 240px;
+			 background-color: #779126;
+			 background-color: #627528;
+			 vertical-align: middle;
+	}
+	input#search-button {
+		max-width: 350px;
+	}
+} /*end media query */
+
+@media(min-width: 1200px) {
+	.searchform-contents {
+		padding: 50px;
+	}
+} /*end media query */
+
+/********************************************************************
+	PLANT RESULTS PAGE
+ *********************************************************************/
+
+.plant-container {
+	padding-left: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-content: flex-start;
+}
+
+.plant-entry {
+	width: auto;
+	/*background: #fcfbf2;*/
+	transition: .1s ease-out ;
+	display: block;
+	flex-basis: 33.33%;
+	margin-bottom: 20px;
+}
+
+.plant-entry .summary {
+	padding: 20px;
+}
+
+.plant-entry .summary p {
+	padding: 0 10px;
+}
+
+h2.entry-title,
+span.entry-title {
+	display: block;
+	font-family: Rosario;
+	color: #eeeee2;
+	color: #9F3255;
+	/*color: #9F3255;*/
+	/*padding: 1.5rem 0 1rem;*/
+	font-weight: bold;
+	text-align: center;
+	font-size: 2.1rem;
+}
+
+h2.entry-title {
+	font-size: 1.6rem;
+}
+
+.results h2.page-title {
+	/*padding-top: 1rem;*/
+}
+
+.results h2.page-title,
+.results p {
+	text-align: center;
+}
+
+/*thumbnail is given the below class by wordpress*/
+.wp-post-image {
+	/*margin: 5% 3% 2% 2%;*/
+	/*padding: 1%;*/
+	/*border: 2px solid #E2E2C6;*/
+	transition: ease .2s;
+	/*float: left;*/
+}
+
+.summary a {
+	border-bottom: none;
+}
+
+.plant-entry a.button {
+	display: block;
+	/*width: 250px;*/
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 1.2em;
+	font-size: 1.3rem;
+	text-align: center;
+	border: 3px solid #84a06a;
+}
+
+@media (min-width: 800px) {
+
+	.plant-container {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		/*justify-content: space-between;*/
+		/*align-items: stretch;*/
+		/*align-content: flex-start;*/
+	}
+
+	.plant-entry {
+		flex-basis: 50%;
+		/*flex-grow: 1;*/
+	}
+
+	h2.entry-title {
+		font-size: 1.8rem;
+		margin-bottom: 0;
+	}
+} /* end media query 800px */
+
+@media(min-width: 1300px) {
+	.plant-entry {
+		flex-basis: 30%;
+	}
+	.plant-entry .summary p {
+		padding: 0 20px;
+	}
+} /*end media query */
+
+@media(min-width: 2000px) {
+	.plant-entry {
+		flex-basis: 24%;
+		/* flex-basis: 50%; */
+		/*flex-grow: 1;*/
+	}
+}/*end media query */
+
+/*****************************************************************
+	PLANT INTRO SECTION
+ *****************************************************************/
+
+
+ span.scientific-name {
+	font-style: italic;
+	font-weight: normal;
+}
+
+img.main-plant-image {
+	width: 100%;
+	/*padding: 2px;*/
+}
+
+img.secondary-plant-image {
+	width: 100%;
+}
+
+/*********************************************************************
+	INDIVIDUAL PLANT POSTS - ROOM/POSITON/CARE-LEVEL INFO
+ *****************************************************************************/
+
+.chosen-plant-summary {
+	width: 100%;
+	margin: 0;
+	padding: 30px 0;
+	/*background: rgba(128, 138, 48, 0.1);*/
+	/*background: rgba(255, 251, 230, .5);*/
+}
+
+.chosen-plant-summary span.room-list {
+	display: block;
+	padding: 0 3px;
+	font-family: Lato;
+}
+
+.chosen-plant-summary p {
+	font-family: Lato;
+	color: #2e3837;
+	width: 95%;
+	margin: 0 auto;
+	padding: 4% 0;
+	text-align: left;
+	line-height: 1.8;
+}
+
+.chosen-plant-summary p a {
+	font-size: 1em;
+	font-family: Lato;
+	display: inline-block;
+	border-bottom: 2px solid #698650;
+	padding-bottom: 1px;
+}
+
+.chosen-plant-summary p a:hover,
+.chosen-plant-summary p a:focus,
+.chosen-plant-summary p a:active {
+	color: #8f425a;
+}
+
+/***************************************************************
+	INDIVIDUAL PLANT POSTS - QUICK CARE SECTION
+ *********************************************************************/
+.quick-care-info {
+	/*margin: 0 auto;*/
+	padding-bottom: 3%;
+	/*width: 70%;*/
+	/*margin-top: 5%;*/
+}
+
+.plant-info {
+	max-width: 95%;
+}
+
+.quick-care-info h3 {
+	text-align: center;
+	padding: 1% 0;
+	text-transform: uppercase;
+}
+
+img.quick-care-icon {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding-bottom: 4%;
+	width: 80px;
+}
+
+section.quick-care-section p {
+	text-align: center;
+}
+
+/**************************************************************
+ INDIVIDUAL PLANT POSTS - QUICK CARE GUIDE
+************************************************************************/
+
+.quick-care-guide {
+display: -webkit-flex;
+display: flex;
+
+/*-webkit-flex-direction: row;*/
+flex-direction: row;
+
+-webkit-align-items: flex-start;
+align-items: flex-start;
+
+-webkit-justify-content: space-around;
+justify-content: space-around;
+
+ flex-wrap: wrap;
+ -webkit-flex-wrap: wrap;
+}
+
+ .quick-care-info {
+	 flex-basis: 50%;
+ }
+
+ .quick-care-guide {
+	 margin-top: 20px;
+ }
+
+.intro-container {
+	padding: 30px 0 20px;
+	background: rgba(128, 138, 48, 0.1);
+	background: rgba(176,169, 152,.1);
+	/*background: rgba(255, 251, 230, .5);*/
+}
+/* lighting styling covered first */
+.care-info h3 span.lighting,
+.care-info h3 span.watering,
+.care-info h3 span.humidity,
+.care-info h3 span.feeding,
+.care-info h3 span.temperature,
+.care-info h3 span.pests {
+
+	font-size: .85em;
+	text-transform: uppercase;
+	padding: 1% 0 1% 2%;
+	margin: 20px 0;
+	text-align: left;
+	background: #FCAB07;
+	background: #E7B32C;
+	border: 4px solid #ecc051;
+	color: #fff8e0;
+	letter-spacing: 2px;
+	display: block;
+	width: 95%;
+}
+
+.detailed-care-info {
+	padding-left: 0;
+}
+.care-info.lighting {
+	border-bottom: 4px solid #E7B32C;
+}
+.care-info h3 span.watering {
+	background: #88c4d7;
+	border: 4px solid #a7d3e2;
+}
+.care-info h3 span.humidity {
+	background: #96aac0;
+	border: 4px solid #acbccd;
+}
+.care-info h3 span.feeding {
+	background: #7A4A2A;
+	background: #C08C40;
+	border: 4px solid #c99f5e;
+}
+.care-info h3 span.temperature {
+	background: #BE1921;
+	background: #e5343d;
+	border: 4px solid #e7464e;
+}
+.care-info h3 span.pests {
+	background: #7b8c93;
+	border: 4px solid #97a4aa;
+}
+.care-info p {
+	width: 95%;
+}
+
+/*Plant first aid/problems*/
+p.plant-problem {
+	padding: 2% 0;
+	font-size: 1.1em;
+	font-weight: 700;
+	font-style: italic;
+}
+
+p.plant-answer {
+	padding: 2% 0 6%;
+}
+
+.first-aid-section {
+	border-bottom: 2px dotted #e2e2c6;
+	padding-bottom: 20px;
+}
+
+@media(min-width: 600px) {
+	.quick-care-info {
+ 	 flex-basis: 33.333%;
+  }
+} /*end media query */
+
+@media(min-width: 710px) {
+	.quick-care-guide {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+} /*end media query */
+
+@media (min-width: 1000px) {
+	/*SECTIONS*/
+	/*.plant-intro-section,*/
+	.quick-care-section,
+	.house-plant-care-section,
+	.plant-description-section,
+	.house-plant-care-section,
+	.first-aid-section,
+	.disqus {
+		margin: 0 auto 0;
+	}
+
+	.first-aid-section h3 {
+		text-align: center;
+	}
+	.main-plant-image-container .main-plant-image {
+		margin: 0 auto;
+		width: 90%;
+	}
+
+	img.main-plant-image,
+	img.secondary-plant-image,
+	.plant-description-info {
+		width: 100%;
+	}
+	.plant-description-info {
+		margin-top: 25px;
+	}
+	.chosen-plant-summary p {
+		font-family: Lato;
+		width: 95%;
+		color: #2e3837;
+		max-width: 1240px;
+		margin: 0 auto;
+		padding: 2% 0;
+	}
+
+	.plant-description-section {
+	width: 100%;
+	margin: 0 auto;
+	}
+
+	.quick-care-info {
+ 	 flex-basis: 40%;
+  }
+} /*end media query */
+
+@media (min-width: 1700px) {
+	.quick-care-info {
+ 	 flex-basis: 32%;
+  }
+}
+
+@media (min-width: 2000px) {
+	.intro-container {
+		max-width: 96em;
+		margin: auto;
+		padding: 20px;
+	}
+}
+
+/****************************************************************
+	FEATURED PLANTS LANDING PAGE
+**********************************************************************/
+.featuredplant-container {
+	/* background: red; */
+	list-style: none;
+	max-width: 64em;
+	margin: 0;
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+}
+
+.featuredplant-container li {
+	clear: both;
+	/* background: blue; */
+	flex-basis: 48%;
+	flex: 1 1 auto;
+	/* max-width: 48%; */
+}
+
+.featuredplant-container li div {
+	position: relative;
+}
+
+.featuredplant-container li img {
+	width: 100%;
+}
+.featuredplant-container li div img {
+	max-width: 100%;
+	position: relative;
+}
+
+.featuredplant-container li div h2 {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	color: #fff;
+	background: #943b55;
+	background-color: #667334;
+	text-align: center;
+	font-size: 1.75rem;
+	font-weight: 400;
+	margin: 0;
+}
+
+
+@media(min-width: 700px) {
+	.featuredplant-container {
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+
+	.featuredplant-container li {
+		max-width: 50%;
+	}
+}
+/**************************************************************
+	FEATURED PLANTS INDIVIDUAL PAGE
+ *******************************************************************/
+
+	.featured-plant-post {
+		width: 95%;
+	}
+
+	.featured-plant-name h3,
+	.featured-plant-post h2,
+	.featured-plant-post h2.page-title {
+		text-align: center;
+		margin: 0;
+	}
+
+	.featured-plant-intro h2 {
+		color: #9E2848;
+	}
+
+	.featured-plant-name span.scientific-name {
+		background: #fffdf1;
+	}
+
+	.featured-plant-image {
+		width: 95%;
+		margin: 0 auto;
+	}
+
+/*image container for images uploaded via wp-admin*/
+	.featured-image {
+		padding-bottom: 20px;
+	}
+
+	.featured-plant-image img  {
+		display: block;
+		margin: 5% auto;
+		padding: 1%;
+	}
+
+	.featured-plant-intro,
+	.featured-plant-content {
+		width: 100%;
+	}
+
+	.what-do-now h2 {
+		text-align: center;
+	}
+
+ /********************************************************************
+	HOME PAGE WELCOME MESSAGE
+ *********************************************************************/
+
+	.welcome-message {
+		width: 80%;
+	}
+
+	.welcome-message p {
+		font-size: 1.1em;
+	}
+
+ /*******************************************
+ HOME PAGE WELCOME MESSAGE
+**************************************************/
+	.why-plants p,
+	.latest-plants p {
+		max-width: 90%;
+	}
+	.latest-post .button {
+		clear: both;
+	}
+ /**********************************************************
+	PLANT RESULTS PAGE
+ ***************************************************************/
+	.results p {
+		font-size: 1.3rem;
+	}
+
+/****************************************************************
+	INDIVIDUAL PLANT POSTS - DETAILED CARE GUIDE
+ *******************************************************************/
+ul.detailed-care-info {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	padding-left: 0;
+}
+
+.detailed-care-info > li {
+	list-style-type: none;
+}
+.care-info h3 {
+		text-align: left;
+}
+
+.house-plant-care-section h2 {
+	text-align: left;
+}
+@media (min-width: 650px) {
+
+	.secondary-nav ul {
+		text-align: center;
+		}
+
+	.secondary-nav ul li {
+	 	list-style-type: none;
+		padding:  2%;
+		display: inline-block;
+	}
+
+	.secondary-nav ul li a {
+	 	font-size: 1.1em;
+	 	display: inline-block;
+	 	margin: 0;
+	 	padding: 0;
+	}
+
+	.error-404 {
+		width: 50%;
+		margin: 5% auto;
+		text-align: center;
+	}
+
+
+	.welcome-message {
+		width: 50%;
+	}
+
+	/*fixes bug with a.button link collapsing*/
+	.featured-plant a {
+		clear: left;
+	}
+
+	.why-plants,
+	.featured-plant {
+		max-width: 44%;
+		float: left;
+		margin: 5% 3%;
+	}
+
+	.featured-image img {
+		display: block;
+		/*margin: auto;*/
+		/*width: 100%;*/
+		/*max-width: 300px;*/
+	}
+
+	form select {
+		/*-webkit-appearance:none; *//*remove all chrome styling */
+		outline: none;
+	}
+
+	form, .choose-your-plant-intro {
+		/*width: 95%;*/
+		/*margin: 5% auto;*/
+		/*background: #f8f4e8;*/
+		/*float: left;*/
+		/*padding: 2%;*/
+	}
+
+	.care-level-choice h3, .position-choice h3, .room-choice h3 {
+		padding-top: 2%;
+		font-weight: bold;
+		font-size: 1.2em;
+		margin-bottom: 1%;
+		font-family: Lato;
+	}
+
+	.room-choice h2 {
+		font-size: 1.7em;
+		font-weight: bold;
+	}
+
+
+
+	.care-level-choice h3,
+	.position-choice h3,
+	.room-choice h3,
+	select {
+		width:100%;
+	}
+
+	select,
+	input#search-button {
+		display: block;
+		/*border: 3px solid #80955f;*/ /*green*/
+	}
+
+	select {
+		font-size: 1.15em;
+		font-family: Lato;
+		font-weight: bold;
+		margin-top: 2%;
+		border-radius: 5px;
+		width: 80%;
+	}
+
+	option {
+		margin: 3%;
+		font-size: 1.2em;
+	}
+
+} /*end media query */
+@media (min-width: 700px) {
+
+	.detailed-care-info {
+		/*max-width: 64em;*/
+		margin: auto;
+		padding-left: 0;
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: row;
+		justify-content: center;
+		justify-content: space-between;
+		/*align-items: center;*/
+	}
+
+	.detailed-care-info > li {
+		flex-basis: 33%;
+	}
+} /* end media query 700px */
+
+
+/************************************************************************
+	PLANT RESULTS TITLE STYLING
+ ************************************************************************/
+
+	/*.what-do-now,*/
+	.post-navigation {
+		width: 95%;
+		margin: 5% auto;
+	}
+
+	.what-do-now h2 {
+		/*padding: 40px 0 0;*/
+	}
+
+	.what-next {
+		clear: both;
+	}
+
+	.plant-content-container  {
+		/*margin: 25px 0 0;*/
+	}
+
+/**********************************************************************
+	INDIVIDUAL PLANT POSTS - ROOM/POSITON/CARE-LEVEL INFO >650px
+ ******************************************************************************/
+	.main-plant-image-container {
+		width: 100%;
+		display: block;
+		margin: 0;
+		padding: 0;
+	}
+
+	.main-plant-image-container .main-plant-image {
+		display: block;
+		margin: auto;
+		/*width: 75%;*/
+	}
+
+	.chosen-plant-summary p {
+		padding: 2% 0;
+	}
+
+	.care-info {
+		margin: 3% 0;
+	}
+
+	.plant-info h3 {
+		font-size: 1.2em;
+		text-align: center;
+	}
+
+/*Plant first aid/problems*/
+
+	p.plant-problem {
+		font-size: 1.2em;
+	}
+
+/*********************************************************
+	FEATURED PLANTS INDIVIDUAL PAGE >650px
+ **************************************************************/
+
+	.featured-plant-intro h2 {
+		color: #9E2848;
+	}
+
+	.featured-plant-image {
+		width: 85%;
+		margin: 0 auto;
+	}
+
+	/*image container for images uploaded via wp-admin*/
+	.featured-image {
+		height: auto;
+	}
+
+/*************************************************************
+	FEATURED PLANTS INDIVIDUAL PAGE >650px
+ ************************************************************/
+
+	.about-content {
+		width: 90%;
+		margin: 5% auto 0;
+	}
+
+@media (min-width: 850px) {
+
+	/*quick care info */
+	.plant-info h3 {
+	font-size: 1.35rem;
+	}
+	.plant-info p {
+		font-size: 1.25rem;
+	}
+
+	/*LINKS*/
+	h2.plant-title a {
+		font-size: 1.1em;
+	}
+	p {
+		/*padding-bottom: 4%;*/
+		/* font-size: 1.3em; */
+		/*color: #2e3837;*/
+	}
+} /* end media query 850px */
+
+/*******************************************************
+	NAVIGATION >850px
+ ************************************************/
+
+nav {
+	/*width: 85%;
+	float: right;*/
+	/*display: inline-block;*/
+	/*text-align: right;*/
+	padding: 1% 0;
+	/*vertical-align: middle;*/
+	/*background: #486e2b;*/
+}
+
+/**********************************************************
+	HOME PAGE
+ **********************************************************/
+
+/*.homepage-content {
+	width: 95%;
+	margin: 0 auto;
+}*/
+
+.welcome-message h2 {
+	margin-top: 1%;
+	padding: 1% 3%;
+	font-size: 1.7em;
+}
+
+.welcome-message h3 {
+	padding: 1% 3% 0%;
+	font-size: 1.35em;
+}
+
+.welcome-message p {
+	margin-top: 2%;
+	padding: 0 0 1% 3%;
+	font-size: 1.2em;
+}
+
+.welcome-message a.button {
+	font-size: 1.3em;
+	max-width: 200px;
+}
+
+.why-plants,
+.featured-plant  {
+	max-width: 90%;
+	float: left;
+	margin: 5% 0 5% 2.5%;
+}
+
+@media(min-width: 700px) {
+
+.why-plants,
+.featured-plant  {
+	max-width: 45%;
+	float: left;
+	margin: 5% 0 5% 5%;
+}
+
+	.featured-plant {
+	max-width: 45%;
+	float: right;
+	margin: 5% 5% 5% 0;
+	}
+
+	.why-plants p,
+	.latest-post p {
+		width: 90%;
+	}
+
+	.featured-plant h3 {
+		font-weight: bold;
+		padding-top: 15px;
+		font-size: 1.75rem;
+		/* text-transform: uppercase; */
+	}
+
+/*fixes bug with a.button link collapsing*/
+	 .latest-post a.button {
+		clear: both;
+		margin-top: 2%;
+		float: left;
+		/* max-width: 225px; */
+	}
+}
+
+/***********************************************************************
+	FIND YOUR PLANT PAGE
+ **************************************************************/
+
+
+.care-level-choice h3,
+.position-choice h3,
+.room-choice h3,
+select {
+	width:100%;
+}
+
+select,
+input#search-button {
+	display: block;
+}
+
+select:focus{
+	/*border: 3px solid #799d53;*/
+}
+
+@media(min-width: 1800px) {
+	label {
+		font-size: 1.2em;
+		padding: 6px 8px;
+		max-width: 300px;
+	}
+} /*end media query */
+
+/****************************************************************
+	PLANT RESULTS TITLE STYLING
+ *********************************************************************/
+.post-navigation {
+	width: 95%;
+	margin: 5% auto 0;
+}
+
+/********************************************************************
+	PLANT RESULTS PAGE
+ *********************************************************************/
+.plant-entry a.button {
+	text-align: center;
+}
+/*clear left kept for older browsers - browsers using flex will ignore */
+/*.plant-entry:nth-child(2n) {
+	clear: left;
+}*/
+
+/*****************************************************************
+	INDIVIDUAL PLANT POSTS
+ ******************************************************************/
+
+.main-plant-image-container {
+	display: block;
+	margin: 0;
+}
+
+/*Introduction*/
+.plant-intro-section  {
+	width: 100%;
+	padding-right: 0;
+	float: none;
+	padding-bottom: 50px;
+}
+
+.plant-description-info h3 {
+	text-align: center;
+}
+
+img.main-plant-image {
+	/*width: 50%;*/
+	display: block;
+	margin: auto;
+}
+
+.care-info {
+	margin-top: 0;
+}
+
+/*Plant first aid/problems*/
+.first-aid-problem {
+	margin: 2% 4% 0 0;
+	width: 45%;
+	float: left;
+}
+
+p.plant-problem {
+	padding: 0 0 2% ;
+	font-weight: 700;
+}
+
+p.plant-answer {
+	padding: 2% 0;
+	/*border-bottom: 2px solid #2b5803;*/
+}
+
+/**************************************************************************
+	FEATURED PLANTS INDIVIDUAL PAGE
+ *******************************************************************/
+
+.featured-plant-image {
+	width: 75%;
+	margin: 0 auto;
+}
+
+/****************************************************************
+	ABOUT >850px
+ ***************************************************************/
+
+	.about-content {
+		width: 70%;
+		margin: 5% auto;
+	}
+
+/**********************************************************
+	INTRODUCTION AND QUICK CARE SECTION >1200px
+ *******************************************************************/
+@media(min-width: 1000px) {
+	.plant-intro-section  {
+		width: 50%;
+		padding-right: 0;
+		float: right;
+	}
+
+	.quick-care-section {
+		width: 45%;
+		margin-left: 4%;
+		float: left;
+		/*margin-top: 30px;*/
+		/*margin-left: 5%;*/
+	}
+} /*end media query */
+
+	img.primary-plant-photo {
+		width: 100%;
+	}
+
+	.plant-info h3 {
+		text-align: center;
+		margin-bottom: 0;
+	}
+
+	.quick-care-info .plant-info p {
+		text-align: center;
+		margin-top: 0;
+	}
+
+	/*Plant description section*/
+	.plant-description-section {
+		clear: left;
+		width: 100%;
+	}
+
+	.quick-care-info .plant-info h3,
+	.care-info h3 {
+		text-align: center;
+		margin-top: 0;
+	}
+
+/*************************************************************
+ * DISQUS >1200px
+ ********************************************************/
+
+	section.disqus {
+		width: 100%;
+	}
+
+	section.disqus h3,
+	section.disqus p {
+		text-align: center;
+	}
+
+/****************************
+	FEATURED PLANTS ARCHIVE PAGE >1200px
+ *************************************/
+	.plant-introduction {
+		margin: 2% auto 0;
+	}
+
+
+/*****************************************
+	FEATURED PLANT INDIVIDUAL PAGE
+ ********************************/
+
+	.featured-plant-post {
+		width: 65%;
+		margin: 5% auto;
+	}
+
+	.featured-plant-intro h2 {
+		color: #9E2848;
+	}
+
+
+	.featured-plant-image {
+		width: 50%;
+		margin: 0 auto;
+	}
+
+	.featured-plant-image img  {
+		/*width: 98%;*/
+		/*max-width: 300px;*/
+		display: block;
+		margin: 5% auto;
+		/* border: 2px solid #e2e2c6; */
+		padding: 1%;
+	}
+
+	.featured-plant-intro,
+	.featured-plant-content {
+		width: 100%;
+	}
+
+	.about-content {
+		width: 50%;
+	}
+
+
+
+@media (min-width: 1600px) {
+
+	.homepage-introduction {
+		/* margin-top: 5%; */
+	}
+
+} /*END MEDIA QUERY 1600PX*/
+
+@media (min-width: 2200px) {
+
+	.container {
+		/*width: 88em;*/
+		max-width: 88em;
+	}
+}
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+/* Make sure logo link wraps around logo image. */
+.custom-logo-link {
+	display: inline-block;
+}
+
+/*--------------------------------------------------------------
+## Captions
+--------------------------------------------------------------*/
+.wp-caption {
+	margin-bottom: 1.5em;
+	max-width: 100%;
+}
+
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-caption .wp-caption-text {
+	margin: 0.8075em 0;
+}
+
+.wp-caption-text {
+	text-align: center;
+}
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+	word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar. */
+}
+
+/* Do not show the outline on the skip link target. */
+#content[tabindex="-1"]:focus {
+	outline: 0;
+}
