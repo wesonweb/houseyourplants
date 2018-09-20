@@ -1,3 +1,3 @@
 Houseyourplants
 
-find the plant that's perfect for your home.
+Find the plant that's perfect for your home.
