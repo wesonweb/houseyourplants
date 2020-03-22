@@ -2497,6 +2497,7 @@ ul.detailed-care-info {
   display: block;
   margin: auto;
   /*width: 75%;*/
+  max-width: 75%;
 }
 
 .chosen-plant-summary p {
@@ -2781,6 +2782,7 @@ p.plant-answer {
     float: left; */
     /*margin-top: 30px;*/
     /*margin-left: 5%;*/
+    align-self: center;
   }
 } /*end media query */
 
