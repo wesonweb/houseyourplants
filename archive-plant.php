@@ -26,11 +26,11 @@
 
 			<?php if(have_posts()) : while(have_posts()) : the_post(); //begin the loop ?>
 
-				<div class="plant-entry">
+				<article class="plant-entry">
 
 						<div class="summary">
 
-						 	<a href="<?php the_permalink();?>"><?php the_post_thumbnail(); ?> </a>
+							<a href="<?php the_permalink();?>"><?php the_post_thumbnail(); ?> </a>
 							<h2 class="entry-title"><?php the_title(); ?></h2>
 
 							<?php the_excerpt(); ?>
@@ -40,7 +40,7 @@
 						</div>
 						<!-- end summary div -->
 
-					</div> <!-- end plant entry -->
+					</article> <!-- end plant entry -->
 
 
 					<?php endwhile; endif;  ?>
