@@ -22,44 +22,41 @@
 
 				$args = array(
 						'post_type' 			=> 	'plant', //return posts that are post type plant (individual plant posts)
-						'posts_per_page'	=>	'-1', //displays all plant posts
-
+						'posts_per_page'		=>	'-1', //displays all plant posts
 						'orderby' 				=> 	'title', //order by title name
-
 						'tax_query'				=> 	array(
+						'relation'				=>	'AND',
 
-								'relation'				=>	'AND',
+							array(
 
-																	array(
+							'taxonomy'		=> 	'room',
+							'field'			=> 	'slug',
+							'terms'			=>	$room
 
-																	'taxonomy'		=> 	'room',
-																	'field'			=> 	'slug',
-																	'terms'			=>	$room
+							),
 
-																	),
+							array(
 
-																	array(
+							'taxonomy'		=> 	'position',
+							'field'			=> 	'slug',
+							'terms'			=>	$position
 
-																	'taxonomy'		=> 	'position',
-																	'field'			=> 	'slug',
-																	'terms'			=>	$position
-
-																		),
-
-
-																	array(
-
-																	'taxonomy'		=> 	'care_level',
-																	'field'			=> 	'slug',
-																	'terms'			=>	$care_level
+								),
 
 
-																		),
+							array(
+
+							'taxonomy'		=> 	'care_level',
+							'field'			=> 	'slug',
+							'terms'			=>	$care_level
 
 
-																	),
+								),
 
-																);
+
+							),
+
+						);
 
 
 				?>
