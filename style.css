@@ -2011,14 +2011,14 @@ img.secondary-plant-image {
  *********************************************************************/
 .quick-care-info {
   /*margin: 0 auto;*/
-  padding-bottom: 3%;
-  flex-basis: 33.33333%;
+  padding-bottom: 2rem;
+  flex-basis: 30%;
   /*width: 70%;*/
   /*margin-top: 5%;*/
 }
 
 .plant-info {
-  max-width: 95%;
+  /* max-width: 95%; */
 }
 
 .quick-care-info h3 {
@@ -2043,6 +2043,7 @@ section.quick-care-section p {
 ************************************************************************/
 
 .quick-care-guide {
+  padding: 0;
   display: -webkit-flex;
   display: flex;
   list-style: none;
@@ -2065,7 +2066,7 @@ section.quick-care-section p {
 }
 
 .quick-care-guide {
-  margin-top: 20px;
+  /* margin-top: 20px; */
 }
 
 .intro-container {
@@ -2156,7 +2157,7 @@ p.plant-answer {
 @media (min-width: 710px) {
   .quick-care-guide {
     flex-direction: row;
-    justify-content: space-between;
+    /* justify-content: space-between; */
   }
 } /*end media query */
 
