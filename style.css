@@ -1743,7 +1743,11 @@ input#search-button:hover {
     font-size: 1.425rem;
   }
   .form-container {
-    /*height: 400px;*/
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
     /* padding: 30px 0 50px; */
   }
 
@@ -2419,6 +2423,10 @@ ul.detailed-care-info {
   form select {
     /*-webkit-appearance:none; */ /*remove all chrome styling */
     outline: none;
+  }
+
+  #plant-searchform {
+    width: 100%;
   }
 
   form,
