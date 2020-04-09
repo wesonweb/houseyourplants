@@ -639,7 +639,8 @@ select {
   outline: none;
   box-shadow: none;
   border: none;
-  color: ##222;
+  color: #222;
+  background-color: #fffdef;
   /* width: 10rem; */
   cursor: pointer;
   padding: 1rem;
