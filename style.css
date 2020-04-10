@@ -2334,9 +2334,6 @@ p.plant-problem {
 
 @media (min-width: 850px) {
   /*quick care info */
-  .plant-info h3 {
-    font-size: 1.35rem;
-  }
   .plant-info p {
     font-size: 1.15rem;
   }
