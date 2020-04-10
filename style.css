@@ -1676,6 +1676,7 @@ input#search-button:hover {
 .plant-entry .summary a.button {
   margin-top: auto;
   align-self: flex-end;
+  padding: 1rem;
 }
 
 h2.entry-title,
