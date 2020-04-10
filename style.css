@@ -50,7 +50,7 @@ select,
 optgroup,
 textarea {
   color: #404040;
-  font-family: Rosario, Lato, sans-serif;
+  font-family: "Rosario", Lato, sans-serif;
   font-size: 16px;
   font-size: 1em;
   line-height: 1.5;
@@ -698,36 +698,12 @@ label {
   /*margin-bottom: 2%;*/
   /*background: rgba(31,16,10,.65);*/
 }
-
-/* .form-select {
-  background: url(images/select-down-arrow.png) no-repeat 95% 0;
-  overflow: hidden;
-  width: 240px;
-  background-color: #779126;
-  background-color: #627528;
-  vertical-align: middle;
-  border: 2px solid rgba(0, 0, 0, 0.65);
-  color: #fff;
-} */
-.form-select:hover {
-  /* border: 2px solid #fff; */
-}
-
 @media (min-width: 900px) {
   label {
     display: block;
     max-width: 380px;
     /*font-size: 1em;*/
   }
-} /*end media query */
-
-@media (min-width: 1000px) {
-  label {
-    /*font-size: 1.2em;*/
-  }
-} /*end media query */
-
-@media (min-width: 1800px) {
 } /*end media query */
 
 /*--------------------------------------------------------------
@@ -1086,11 +1062,6 @@ a.button:focus {
 /*Post and page navigation*/
 
 /*posts*/
-div.post-navigation {
-  /*padding-top: 10px;*/
-  /*border-top: 3px solid #ddd;*/
-}
-
 span.post-navigation-title {
   display: block;
   text-align: center;
@@ -1251,8 +1222,6 @@ a.prev {
   background: #f8f6ea;
   clear: both;
   padding: 20px 0;
-  /*border-top: 2px dotted #e2e2c6;*/
-  /*padding-top: 20px;*/
 }
 
 .results p {
@@ -1276,9 +1245,6 @@ ul.where-now {
 }
 
 ul.where-now li {
-  /*padding-bottom: 5px;
-	margin-left: -25px;
-	margin-bottom: 13px;*/
   display: inline-block;
 }
 
@@ -1300,8 +1266,6 @@ ul.where-now li a:hover,
 ul.where-now li a:focus,
 a.search-link:hover {
   color: #8f425a;
-  /*border-bottom: 2px solid #8f425a;*/
-  /*border-top: 3px solid #799d58;*/
 }
 
 /*error message when no plants found*/
@@ -1318,10 +1282,6 @@ a.search-link:hover {
 .post-navigation {
   clear: both;
   width: 100%;
-  /*margin: 5% 0 0;*/
-  /*padding-top: 2%;*/
-  /*border-top: 3px solid #e2e2c6;*/
-  /*border-bottom: 3px solid #e2e2c6;*/
 }
 
 .post-navigation h2 {
@@ -1338,7 +1298,6 @@ a.page-numbers {
   padding: 5px 10px;
   color: #fff;
   border-bottom: none;
-  /*border-radius: 10px;*/
   display: inline-block;
 }
 
@@ -1356,7 +1315,6 @@ span.page-numbers.current {
 
 .post-navigation .current {
   background: #c1d0b4;
-  /*border-radius: 10px;*/
 }
 
 /*post navigation styling*/
@@ -1474,9 +1432,6 @@ a.next {
 }
 
 .latest-post {
-  /* border-left: 8px solid #943b55; */
-  /* border-top: 8px solid #943b55; */
-  /* border-bottom: 6px solid #943b55; */
   padding: 25px 35px;
   background: #943b55;
 }
@@ -1501,23 +1456,15 @@ a.next {
   margin: 0px;
   letter-spacing: 1px;
   font-size: 1.75rem;
-  /* margin-left: -20px;
-	padding-left: 20px; */
-  /* padding-top: 6px; */
   padding-bottom: 25px;
   background: #943b55;
   color: #fff;
   font-weight: normal;
-
-  /* transform: rotate(25deg);
-	transform-origin: top left 0; */
-  /* margin-left: -70px; */
 }
 .latest-post h3 {
   border-top: 2px dotted #fff;
   padding: 10px 0;
 }
-
 .latest-post h3:hover {
   border-top: 2px solid #fff;
 }
@@ -1530,7 +1477,6 @@ a.next {
   color: #fff;
   float: right;
 }
-
 .featured-plant-title {
   display: block;
   padding: 10px 0;
@@ -1539,14 +1485,12 @@ a.thumbnail-link {
   border-bottom: none;
   margin-left: -20px;
 }
-
 .featured-plant .wp-post-image,
 .featured-plant p {
   margin: 2% 2% 0 0;
   margin: 0;
   float: none;
 }
-
 h2.plant-title a {
   color: #9f3255;
   font-size: 1em;
@@ -1555,10 +1499,8 @@ p.scientific-name {
   font-style: italic;
   padding: 0;
 }
-
 .featured-plant a {
   clear: left;
-  /* margin: 20px 0; */
 }
 
 @media (min-width: 700px) {
@@ -1567,7 +1509,6 @@ p.scientific-name {
     float: left;
     margin: 5% 5% 5% 0;
   }
-
   .featured-plant {
     width: 45%;
     float: right;
@@ -1581,11 +1522,9 @@ p.scientific-name {
     float: right;
     margin: 5% 5% 5% 0;
   }
-
   .why-plants p {
     width: 100%;
   }
-
   .latest-post p {
     width: 90%;
   }
@@ -1594,7 +1533,6 @@ p.scientific-name {
     letter-spacing: 2px;
     padding: 0;
   }
-
   /*fixes bug with a.button link collapsing*/
   .latest-post a.button {
     clear: both;
@@ -1621,40 +1559,17 @@ p.scientific-name {
   background-color: rgba(176, 169, 152, 0.1);
   padding: 20px 0;
 }
-form select {
-  /*-webkit-appearance:none; */ /*remove all chrome styling */
-  /* outline: none; */
-}
-
-/* form select option {
-  font-family: Lato;
-  background-image: -webkit-linear-gradient(
-    hsla(0, 0%, 100%, 0),
-    hsla(0, 0%, 100%, 0)
-  );
-  background-image: -o-linear-gradient(
-    hsla(0, 0%, 100%, 0),
-    hsla(0, 0%, 100%, 0)
-  );
-  background-image: linear-gradient(hsla(0, 0%, 100%, 0), hsla(0, 0%, 100%, 0));
-} */
-
 form {
   max-width: 100%;
 }
-
 .searchform h2 {
   font-size: 1.75rem;
   font-weight: bold;
-  /*border-bottom: 2px solid #e2e2c6;*/
-  /*border-bottom: 2px solid #cacab6;*/
   color: #9f3255; /*purple*/
   color: #fff;
-  /*color: #fff;*/
   margin: 0;
   padding: 10px 0 10px 20px;
   background: rgba(0, 0, 0, 0.14);
-  /*background: rgba(255, 255, 255, 0.74);*/
   text-align: center;
 }
 
@@ -1667,11 +1582,6 @@ form {
 
 .searchform-contents {
   background-color: rgba(0, 0, 0, 0.65);
-  /* margin-top: 50px; */
-  /* border: 2px solid #fff; */
-  /* padding: 25px; */
-  /*display: flex;
-  flex-direction: row;*/
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -1679,17 +1589,8 @@ form {
 }
 
 .searchform-contents > div {
-  /* width: 90%; */
-  /* width: 80%;
-  margin: 0 auto 25px; */
   flex-basis: 30%;
 }
-
-/* .searchform-contents > div.form-select {
-  width: 250px;
-  max-width: 500px;
-  margin-top: 3px;
-} */
 
 input#search-button {
   font-family: Lato;
@@ -1719,18 +1620,6 @@ input#search-button:hover {
   .plantfinder-intro {
     margin-top: 20px;
   }
-
-  /* .searchform-contents > div {
-    width: 50%;
-    margin: 0 auto 25px;
-  } */
-
-  /* .searchform-contents > div .form-select {
-    width: 250px;
-    max-width: 200px;
-    max-width: 268px;
-    margin: auto;
-  } */
 } /*end media query */
 
 @media (min-width: 720px) {
@@ -1751,19 +1640,16 @@ input#search-button:hover {
     align-items: center;
     /* padding: 30px 0 50px; */
   }
-
   input#search-button {
     width: 50%;
     margin: 10px auto;
     font-size: 1.45rem;
     border: 2px solid rgba(0, 0, 0, 0.25);
   }
-
   label {
     /* text-align: center; */
     margin: auto;
   }
-
   .searchform-contents {
     flex-direction: row;
     align-items: center;
@@ -1771,37 +1657,13 @@ input#search-button:hover {
 } /* end media query 720px */
 
 @media (min-width: 900px) {
-  /* .searchform-contents > div,
-  .searchform-contents > div:first-child {
-    width: 30%;
-    width: 33%;
-    float: left;
-    margin-right: 2%;
-    margin-right: 0;
-    margin: auto;
-  } */
-
-  /* .searchform-contents > div .form-select {
-    width: 250px;
-    max-width: 200px;
-    max-width: 268px;
-    margin: auto;
-  } */
-
   label {
     /* text-align: center; */
     margin: auto;
   }
 } /*end media query */
+
 @media (min-width: 1024px) {
-  /* .searchform-contents > div .form-select {
-    background: url(images/select-down-arrow.png) no-repeat 95% 0;
-    overflow: hidden;
-    width: 240px;
-    background-color: #779126;
-    background-color: #627528;
-    vertical-align: middle;
-  } */
   input#search-button {
     max-width: 350px;
   }
@@ -1820,7 +1682,6 @@ input#search-button:hover {
 .plant-container {
   padding-left: 0;
   display: flex;
-  /* flex-direction: column; */
   justify-content: center;
   align-content: flex-start;
   flex-wrap: wrap;
@@ -1828,10 +1689,8 @@ input#search-button:hover {
 
 .plant-entry {
   width: auto;
-  /*background: #fcfbf2;*/
   transition: 0.1s ease-out;
   display: block;
-  /* flex-basis: 20%; */
   margin-bottom: 20px;
   display: flex;
 }
@@ -1847,9 +1706,6 @@ input#search-button:hover {
   margin-top: auto;
   align-self: flex-end;
 }
-.plant-entry .summary p {
-  /* padding: 0 10px; */
-}
 
 h2.entry-title,
 span.entry-title {
@@ -1857,8 +1713,6 @@ span.entry-title {
   font-family: Rosario;
   color: #eeeee2;
   color: #9f3255;
-  /*color: #9F3255;*/
-  /*padding: 1.5rem 0 1rem;*/
   font-weight: bold;
   text-align: center;
   font-size: 2.1rem;
@@ -1868,10 +1722,6 @@ h2.entry-title {
   font-size: 1.6rem;
 }
 
-.results h2.page-title {
-  /*padding-top: 1rem;*/
-}
-
 .results h2.page-title,
 .results p {
   text-align: center;
@@ -1879,11 +1729,7 @@ h2.entry-title {
 
 /*thumbnail is given the below class by wordpress*/
 .wp-post-image {
-  /*margin: 5% 3% 2% 2%;*/
-  /*padding: 1%;*/
-  /*border: 2px solid #E2E2C6;*/
   transition: ease 0.2s;
-  /*float: left;*/
 }
 
 .summary a {
@@ -1892,7 +1738,6 @@ h2.entry-title {
 
 .plant-entry a.button {
   display: block;
-  /*width: 250px;*/
   margin-left: auto;
   margin-right: auto;
   font-size: 1.2em;
@@ -1910,12 +1755,10 @@ h2.entry-title {
     /*align-items: stretch;*/
     /*align-content: flex-start;*/
   }
-
   .plant-entry {
     flex-basis: 48%;
     /*flex-grow: 1;*/
   }
-
   h2.entry-title {
     font-size: 1.8rem;
     margin-bottom: 0;
@@ -1941,8 +1784,6 @@ h2.entry-title {
 @media (min-width: 2000px) {
   .plant-entry {
     flex-basis: 25%;
-    /* flex-basis: 50%; */
-    /*flex-grow: 1;*/
   }
 } /*end media query */
 
@@ -1972,8 +1813,6 @@ img.secondary-plant-image {
   width: 100%;
   margin: 0;
   padding: 30px 0;
-  /*background: rgba(128, 138, 48, 0.1);*/
-  /*background: rgba(255, 251, 230, .5);*/
 }
 
 .chosen-plant-summary span.room-list {
@@ -2012,9 +1851,7 @@ img.secondary-plant-image {
 .quick-care-info {
   /*margin: 0 auto;*/
   padding-bottom: 3%;
-  flex-basis: 33.33333%;
-  /*width: 70%;*/
-  /*margin-top: 5%;*/
+  flex-basis: 33%;
 }
 
 .plant-info {
@@ -2071,10 +1908,6 @@ section.quick-care-section p {
 .intro-container {
   padding: 30px 0 20px;
   display: flex;
-
-  /* background: rgba(128, 138, 48, 0.1); */
-  /* background: rgba(176, 169, 152, 0.1); */
-  /*background: rgba(255, 251, 230, .5);*/
 }
 /* lighting styling covered first */
 .care-info h3 span.lighting,
@@ -2170,7 +2003,6 @@ p.plant-answer {
   .disqus {
     margin: 0 auto 0;
   }
-
   .first-aid-section h3 {
     text-align: center;
   }
@@ -2178,7 +2010,6 @@ p.plant-answer {
     margin: 0 auto;
     width: 90%;
   }
-
   img.main-plant-image,
   img.secondary-plant-image,
   .plant-description-info {
@@ -2195,12 +2026,10 @@ p.plant-answer {
     margin: 0 auto;
     padding: 1em 0;
   }
-
   .plant-description-section {
     width: 100%;
     margin: 0 auto;
   }
-
   .quick-care-info {
     /* flex-basis: 40%; */
   }
@@ -2430,15 +2259,6 @@ ul.detailed-care-info {
     width: 100%;
   }
 
-  form,
-  .choose-your-plant-intro {
-    /*width: 95%;*/
-    /*margin: 5% auto;*/
-    /*background: #f8f4e8;*/
-    /*float: left;*/
-    /*padding: 2%;*/
-  }
-
   .care-level-choice h3,
   .position-choice h3,
   .room-choice h3 {
@@ -2467,20 +2287,12 @@ ul.detailed-care-info {
     /*border: 3px solid #80955f;*/ /*green*/
   }
 
-  /* select {
-    font-size: 1.15em;
-    font-family: Lato;
-    font-weight: bold;
-    margin-top: 2%;
-    border-radius: 5px;
-    width: 80%;
-  } */
-
   option {
     margin: 3%;
     font-size: 1.2em;
   }
 } /*end media query */
+
 @media (min-width: 700px) {
   .detailed-care-info {
     /*max-width: 64em;*/
@@ -2509,16 +2321,8 @@ ul.detailed-care-info {
   margin: 5% auto;
 }
 
-.what-do-now h2 {
-  /*padding: 40px 0 0;*/
-}
-
 .what-next {
   clear: both;
-}
-
-.plant-content-container {
-  /*margin: 25px 0 0;*/
 }
 
 /**********************************************************************
@@ -2592,15 +2396,9 @@ p.plant-problem {
   .plant-info p {
     font-size: 1.25rem;
   }
-
   /*LINKS*/
   h2.plant-title a {
     font-size: 1.1em;
-  }
-  p {
-    /*padding-bottom: 4%;*/
-    /* font-size: 1.3em; */
-    /*color: #2e3837;*/
   }
 } /* end media query 850px */
 
@@ -2609,23 +2407,12 @@ p.plant-problem {
  ************************************************/
 
 nav {
-  /*width: 85%;
-	float: right;*/
-  /*display: inline-block;*/
-  /*text-align: right;*/
-  padding: 1% 0;
-  /*vertical-align: middle;*/
-  /*background: #486e2b;*/
+  padding: 1rem 0;
 }
 
 /**********************************************************
 	HOME PAGE
  **********************************************************/
-
-/*.homepage-content {
-	width: 95%;
-	margin: 0 auto;
-}*/
 
 .welcome-message h2 {
   margin-top: 1%;
@@ -2663,25 +2450,21 @@ nav {
     float: left;
     margin: 5% 0 5% 5%;
   }
-
   .featured-plant {
     max-width: 45%;
     float: right;
     margin: 5% 5% 5% 0;
   }
-
   .why-plants p,
   .latest-post p {
     width: 90%;
   }
-
   .featured-plant h3 {
     font-weight: bold;
     padding-top: 15px;
     font-size: 1.75rem;
     /* text-transform: uppercase; */
   }
-
   /*fixes bug with a.button link collapsing*/
   .latest-post a.button {
     clear: both;
@@ -2733,10 +2516,6 @@ select:focus {
 .plant-entry a.button {
   text-align: center;
 }
-/*clear left kept for older browsers - browsers using flex will ignore */
-/*.plant-entry:nth-child(2n) {
-	clear: left;
-}*/
 
 /*****************************************************************
 	INDIVIDUAL PLANT POSTS
@@ -2808,18 +2587,7 @@ p.plant-answer {
 	INTRODUCTION AND QUICK CARE SECTION >1200px
  *******************************************************************/
 @media (min-width: 1000px) {
-  .plant-intro-section {
-    /* width: 50%;
-    padding-right: 0;
-    float: right; */
-  }
-
   .quick-care-section {
-    /* width: 45%;
-    margin-left: 4%;
-    float: left; */
-    /*margin-top: 30px;*/
-    /*margin-left: 5%;*/
     align-self: center;
   }
 } /*end media query */
@@ -2906,16 +2674,9 @@ section.disqus p {
   width: 50%;
 }
 
-@media (min-width: 1600px) {
-  .homepage-introduction {
-    /* margin-top: 5%; */
-  }
-} /*END MEDIA QUERY 1600PX*/
-
 @media (min-width: 2200px) {
   .container {
-    /*width: 88em;*/
-    max-width: 88em;
+    max-width: 88rem;
   }
 }
 
