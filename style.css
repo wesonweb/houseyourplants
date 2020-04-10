@@ -1663,7 +1663,7 @@ input#search-button:hover {
   transition: 0.1s ease-out;
   display: block;
   margin-bottom: 20px;
-  display: flex;
+  /* display: flex; */
 }
 
 .plant-entry .summary {
