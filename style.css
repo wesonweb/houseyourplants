@@ -104,6 +104,7 @@ blockquote p {
   line-height: 1.7;
   width: 90%;
 }
+
 address {
   margin: 0 0 1.5em;
 }
@@ -144,12 +145,14 @@ ins {
 big {
   font-size: 125%;
 }
+
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
 html {
   box-sizing: border-box;
 }
+
 body {
   background: #fefcf2; /* Fallback for when there is no custom background color defined. */
   background: #fffdf0;
@@ -176,6 +179,7 @@ body {
   /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
   box-sizing: inherit;
 }
+
 q:before,
 q:after {
   content: "";
@@ -192,11 +196,6 @@ hr {
   margin-bottom: 1.5em;
 }
 
-ul,
-ol {
-  /*margin: 0 0 1.5em 0;*/
-}
-
 ul {
   list-style: disc;
 }
@@ -208,7 +207,6 @@ ol {
 li > ul,
 li > ol {
   margin-bottom: 0;
-  /*margin-left: 1.5em;*/
 }
 
 dt {
@@ -287,7 +285,6 @@ h1 {
 }
 
 h2 {
-  /*color: #8C6653;*/
   font-size: 1.625em;
 }
 
@@ -360,6 +357,7 @@ p {
   padding-bottom: 10px;
   color: #656b6c;
 }
+
 p:last-child {
   padding-bottom: 0;
 }
@@ -369,8 +367,6 @@ p.no-plants-found {
 }
 
 h2 {
-  /*font-size: 1.3em;*/
-  /*padding-bottom: 1%;*/
   font-weight: 700;
 }
 
@@ -408,15 +404,12 @@ p.scientific-name {
     /*font-size: 1.4em;*/
     font-weight: 700;
   }
-
   h2.page-title {
     font-size: 1.6em;
   }
-
   h3 {
     font-size: 1.2em;
   }
-
   /*LINKS*/
   h2.plant-title a {
     font-size: 1.1em;
@@ -435,21 +428,17 @@ p.scientific-name {
     /*padding-bottom: 1%;*/
     font-weight: 700;
   }
-
   h2.page-title {
     font-size: 1.6em;
   }
-
   h2.entry-title a {
     font-size: 1em;
   }
-
   h3 {
     font-size: 1.3em;
     /*color: #6b2428;
 		color: #8f2849;*/
   }
-
   h4 span.plant-problem {
     font-weight: bold;
     font-size: 1.3em;
@@ -461,57 +450,42 @@ p.scientific-name {
   h1 {
     font-size: 3em;
   }
-
   h2 {
     font-size: 2.25em;
   }
-
   h3 {
     font-size: 1.75em;
   }
-
   p {
     font-size: 1.1rem;
   }
-
   h1 {
     font-size: 1.9em;
   }
-
   h2 {
     font-size: 1.5em;
     /*padding-bottom: 1%;*/
     font-weight: 700;
   }
-
   h2.page-title {
     font-size: 1.8em;
   }
-
   h2.plant-title {
     font-size: 1.85em;
   }
-
   h3 {
     font-size: 1.6em;
-    /*color: #6b2428;
-		color: #8f2849;*/
   }
-
   .plant-intro-section h2.plant-title,
   .plant-intro-section span.scientific-name {
-    /*text-align: left;*/
     display: block;
     width: 90%;
     margin: auto;
   }
-
   /*quick care plant info*/
-
   .plant-info h3 {
     font-size: 1.3em;
   }
-
   .quick-care-info p {
     font-size: 1.35em;
   }
@@ -545,12 +519,14 @@ div.wpcf7-response-output {
   margin: 1.5rem 0;
   padding: 1rem;
 }
+
 /*sent ok*/
 div.wpcf7-mail-sent-ok {
   border: none;
   background: #93a97d;
   color: #fff;
 }
+
 /*validation errors*/
 div.wpcf7-validation-errors {
   font-size: 1.1rem;
@@ -572,7 +548,6 @@ input[type="submit"] {
   border: 1px solid;
   border-color: #ccc #ccc #bbb;
   border-color: #fff;
-  /*border-radius: 3px;*/
   background: #e6e6e6;
   color: rgba(0, 0, 0, 0.8);
   font-size: 12px;
@@ -580,7 +555,6 @@ input[type="submit"] {
   line-height: 1.5;
   padding: 0.4em 0.5rem 0.4em;
   width: 100%;
-  /*max-width: 200px;*/
   margin: auto;
 }
 
@@ -628,7 +602,6 @@ textarea {
 .form-select {
   margin: 1rem 0;
   position: relative;
-  /* overflow: hidden; */
 }
 
 select {
@@ -641,7 +614,6 @@ select {
   border: none;
   color: #222;
   background-color: #fffdef;
-  /* width: 10rem; */
   cursor: pointer;
   padding: 1rem;
   transition: all 0.5s ease;
@@ -694,15 +666,12 @@ label {
   padding: 2px 6px;
   padding: 12px 6px 8px;
   letter-spacing: 1px;
-  /* font-weight: bold; */
-  /*margin-bottom: 2%;*/
-  /*background: rgba(31,16,10,.65);*/
 }
+
 @media (min-width: 900px) {
   label {
     display: block;
     max-width: 380px;
-    /*font-size: 1em;*/
   }
 } /*end media query */
 
@@ -715,7 +684,6 @@ label {
   list-style: none;
   margin: 0;
   padding-left: 0;
-  /* width: 100%; */
 }
 
 .main-navigation a {
@@ -729,6 +697,7 @@ label {
   transition: 400ms ease-in;
   filter: alpha (opacity=0);
 }
+
 .main-navigation ul > li:hover ul {
   visibility: visible;
   opacity: 1;
@@ -797,8 +766,6 @@ label {
 .main-navigation .active > a,
 .main-navigation .active > a:hover {
   border-bottom: 2px solid #9f3255;
-  /*background: #7c8f39;*/
-  /*color: #fff;*/
   color: #fff;
 }
 
@@ -836,18 +803,13 @@ label {
 }
 
 .site-branding h1 a img {
-  /*display: inline-block;
-	margin: auto;
-	width: 350px;*/
   display: block;
   width: 200px;
   margin: auto;
 }
+
 .site-branding h1 a img:hover {
   transform: perspective(500px) translate3d(0px, 0px, 20px);
-  /* transform: rotate(90deg);
-transform-origin: 50px 50px;
-transform: scaleX(-1); */
 }
 
 .site-navigation {
@@ -866,6 +828,7 @@ nav ul li {
 nav ul li a {
   transition: 0.25s ease;
 }
+
 nav ul li a,
 nav ul li a:visited,
 nav ul li a:active {
@@ -892,29 +855,24 @@ nav ul li a:active {
   nav ul li a:visited {
     color: #506d37; /*darker green */
   }
-
   .main-navigation .active,
   .main-navigation .active > a,
   .main-navigation .active > a:hover {
     border-bottom: 2px solid #9f3255;
     color: #9f3255;
   }
-
   .site-branding h1 a img {
     margin: 0;
   }
-
   ul.nav-menu {
     display: inline-block;
     float: right;
     margin-top: 55px;
   }
-
   ul#primary-menu li {
     display: inline-block;
     text-align: right;
   }
-
   .site-branding {
     width: 20%;
     float: left;
@@ -924,7 +882,6 @@ nav ul li a:active {
     width: 80%;
     float: right;
   }
-
   .menu-toggle {
     display: none;
   }
@@ -943,10 +900,6 @@ nav ul li a:active {
   .main-navigation {
     width: 79%;
     float: right;
-  }
-
-  ul.nav-menu {
-    /*margin-top: 100px;*/
   }
 } /*end media query */
 
@@ -981,9 +934,11 @@ nav ul li a:active {
 .secondary-nav ul li {
   display: block;
 }
+
 .secondary-nav ul li a {
   margin: 0 auto 2%;
 }
+
 .secondary-nav ul li a,
 .social-media li a,
 .secondary-nav ul li a:visited {
@@ -1066,6 +1021,7 @@ span.post-navigation-title {
   display: block;
   text-align: center;
 }
+
 .site-main .comment-navigation,
 .site-main .posts-navigation,
 .site-main .post-navigation {
@@ -1100,6 +1056,7 @@ span.post-navigation-title {
 .pagination h3 {
   margin-bottom: 0;
 }
+
 .nav-links {
   margin: 0 0 20px;
 }
@@ -1111,6 +1068,7 @@ a.page-numbers {
   margin-right: 5px;
   text-decoration: none;
 }
+
 a.next,
 a.prev {
   font-size: 1.5rem;
@@ -1258,6 +1216,7 @@ a.search-link {
   text-align: center;
   font-weight: bold;
 }
+
 ul.where-now li a:first-child {
   margin-right: 10px;
 }
@@ -1272,7 +1231,6 @@ a.search-link:hover {
 .no-plants-found {
   clear: both;
   width: 100%;
-  /*font-size: 1.3em;*/
 }
 
 /*********************************************************************
@@ -1377,6 +1335,7 @@ a.next {
   height: 500px;
   position: relative;
 }
+
 .welcome-message {
   position: absolute;
   top: 50%;
@@ -1435,9 +1394,11 @@ a.next {
   padding: 25px 35px;
   background: #943b55;
 }
+
 .latest-post .summary {
   padding: 10px 0 20px 0;
 }
+
 .latest-post h3,
 .latest-post p {
   color: #fff;
@@ -1461,13 +1422,16 @@ a.next {
   color: #fff;
   font-weight: normal;
 }
+
 .latest-post h3 {
   border-top: 2px dotted #fff;
   padding: 10px 0;
 }
+
 .latest-post h3:hover {
   border-top: 2px solid #fff;
 }
+
 .latest-post h3:after {
   content: "\25BA";
   font-size: 24px;
@@ -1477,28 +1441,34 @@ a.next {
   color: #fff;
   float: right;
 }
+
 .featured-plant-title {
   display: block;
   padding: 10px 0;
 }
+
 a.thumbnail-link {
   border-bottom: none;
   margin-left: -20px;
 }
+
 .featured-plant .wp-post-image,
 .featured-plant p {
   margin: 2% 2% 0 0;
   margin: 0;
   float: none;
 }
+
 h2.plant-title a {
   color: #9f3255;
   font-size: 1em;
 }
+
 p.scientific-name {
   font-style: italic;
   padding: 0;
 }
+
 .featured-plant a {
   clear: left;
 }
@@ -1550,6 +1520,7 @@ p.scientific-name {
   margin: 0;
   padding: 10px;
 }
+
 .plantfinder-intro h2.entry-title {
   color: #fff;
   margin: 0;
@@ -1559,9 +1530,11 @@ p.scientific-name {
   background-color: rgba(176, 169, 152, 0.1);
   padding: 20px 0;
 }
+
 form {
   max-width: 100%;
 }
+
 .searchform h2 {
   font-size: 1.75rem;
   font-weight: bold;
@@ -1601,11 +1574,9 @@ input#search-button {
   font-size: 1.3rem;
   transition: background-color 0.5s ease-in;
   border: none;
-  /*width: 225px;*/
   width: 100%;
   text-align: center;
   margin: 0px auto;
-  /*margin: 10px 0 0;*/
   padding: 6px;
   cursor: pointer;
   border-radius: 0;
@@ -1751,9 +1722,6 @@ h2.entry-title {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    /* justify-content: flex-start; */
-    /*align-items: stretch;*/
-    /*align-content: flex-start;*/
   }
   .plant-entry {
     flex-basis: 48%;
@@ -1849,20 +1817,8 @@ img.secondary-plant-image {
 	INDIVIDUAL PLANT POSTS - QUICK CARE SECTION
  *********************************************************************/
 .quick-care-info {
-  /*margin: 0 auto;*/
-<<<<<<< HEAD
   padding-bottom: 2rem;
   flex-basis: 30%;
-  /*width: 70%;*/
-  /*margin-top: 5%;*/
-=======
-  padding-bottom: 3%;
-  flex-basis: 33%;
->>>>>>> form
-}
-
-.plant-info {
-  /* max-width: 95%; */
 }
 
 .quick-care-info h3 {
@@ -1905,25 +1861,9 @@ section.quick-care-section p {
   -webkit-flex-wrap: wrap;
 }
 
-.quick-care-info {
-  /* flex-basis: 33.3333%; */
-}
-
-.quick-care-guide {
-  /* margin-top: 20px; */
-}
-
 .intro-container {
   padding: 30px 0 20px;
   display: flex;
-<<<<<<< HEAD
-  flex-direction: column;
-
-  /* background: rgba(128, 138, 48, 0.1); */
-  /* background: rgba(176, 169, 152, 0.1); */
-  /*background: rgba(255, 251, 230, .5);*/
-=======
->>>>>>> form
 }
 /* lighting styling covered first */
 .care-info h3 span.lighting,
@@ -2012,7 +1952,6 @@ p.plant-answer {
   .intro-container {
     flex-direction: row;
   }
-
   /*SECTIONS*/
   /*.plant-intro-section,*/
   .quick-care-section,
@@ -2121,8 +2060,7 @@ p.plant-answer {
     flex-direction: row;
     flex-wrap: wrap;
   }
-
-  .featuredplant-container li {
+  s .featuredplant-container li {
     max-width: 50%;
   }
 }
@@ -2227,58 +2165,48 @@ ul.detailed-care-info {
   .secondary-nav ul {
     text-align: center;
   }
-
   .secondary-nav ul li {
     list-style-type: none;
     padding: 2%;
     display: inline-block;
   }
-
   .secondary-nav ul li a {
     font-size: 1.1em;
     display: inline-block;
     margin: 0;
     padding: 0;
   }
-
   .error-404 {
     width: 50%;
     margin: 5% auto;
     text-align: center;
   }
-
   .welcome-message {
     width: 50%;
   }
-
   /*fixes bug with a.button link collapsing*/
   .featured-plant a {
     clear: left;
   }
-
   .why-plants,
   .featured-plant {
     max-width: 44%;
     float: left;
     margin: 5% 3%;
   }
-
   .featured-image img {
     display: block;
     /*margin: auto;*/
     /*width: 100%;*/
     /*max-width: 300px;*/
   }
-
   form select {
     /*-webkit-appearance:none; */ /*remove all chrome styling */
     outline: none;
   }
-
   #plant-searchform {
     width: 100%;
   }
-
   .care-level-choice h3,
   .position-choice h3,
   .room-choice h3 {
@@ -2288,25 +2216,21 @@ ul.detailed-care-info {
     margin-bottom: 1%;
     font-family: Lato;
   }
-
   .room-choice h2 {
     font-size: 1.7em;
     font-weight: bold;
   }
-
   .care-level-choice h3,
   .position-choice h3,
   .room-choice h3,
   select {
     width: 100%;
   }
-
   select,
   input#search-button {
     display: block;
     /*border: 3px solid #80955f;*/ /*green*/
   }
-
   option {
     margin: 3%;
     font-size: 1.2em;
@@ -2325,7 +2249,6 @@ ul.detailed-care-info {
     justify-content: space-between;
     /*align-items: center;*/
   }
-
   .detailed-care-info > li {
     flex-basis: 33%;
   }
