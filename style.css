@@ -1823,7 +1823,7 @@ img.secondary-plant-image {
 
 .quick-care-info h3 {
   text-align: center;
-  padding: 1rem 0;
+  /* padding: 1rem 0; */
   text-transform: uppercase;
 }
 
@@ -1864,6 +1864,7 @@ section.quick-care-section p {
 .intro-container {
   padding: 30px 0 20px;
   display: flex;
+  flex-direction: column;
 }
 /* lighting styling covered first */
 .care-info h3 span.lighting,
@@ -2282,7 +2283,6 @@ ul.detailed-care-info {
   display: block;
   margin: auto;
   /*width: 75%;*/
-  max-width: 75%;
 }
 
 .chosen-plant-summary p {
