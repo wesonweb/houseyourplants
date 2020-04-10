@@ -1674,7 +1674,7 @@ input#search-button:hover {
 }
 
 .plant-entry .summary a.button {
-  margin-top: auto;
+  margin-top: 2rem;
   align-self: flex-end;
   padding: 1rem;
 }
@@ -1743,7 +1743,7 @@ h2.entry-title {
 
 @media (min-width: 1000px) {
   .plant-entry {
-    flex-basis: 24%;
+    /* flex-basis: 24%; */
   }
   .plant-entry .summary p {
     padding: 0 10px;
