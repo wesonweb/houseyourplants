@@ -55,7 +55,7 @@
 
 								<div class="care-level-choice">
 									<!-- <h3>And do you want the plant to be easy to care for? Or more difficult?</h3> -->
-									<label for='care_level'>How difficult a plant to look after?</label>
+									<label for='care_level'>How difficult to look after?</label>
 										<div class="form-select">
 											<?php
 											//create third drop down taxonomy for position

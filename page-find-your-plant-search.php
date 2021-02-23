@@ -75,7 +75,7 @@
 
 									<div class="summary">
 
-									 	<a href="<?php the_permalink();?>"><?php the_post_thumbnail(); ?> </a>
+									 	<a href="<?php the_permalink();?>" class="results-link-image"><?php the_post_thumbnail(); ?> </a>
 										<h2 class="entry-title"><?php the_title(); ?></h2>
 
 										<?php the_excerpt(); ?>

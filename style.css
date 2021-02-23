@@ -1712,7 +1712,11 @@ h2.entry-title {
   font-size: 1.2em;
   font-size: 1.3rem;
   text-align: center;
-  border: 3px solid #84a06a;
+}
+
+.plant-entry a img {
+  height: 300px;
+  object-fit: contain;
 }
 
 @media (min-width: 600px) {
