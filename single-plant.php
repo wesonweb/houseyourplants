@@ -30,9 +30,8 @@
 
 							if( '' !=$tax_text) {
 						?>
-
 					<div class="taxonomy-info container">
-						<?php echo '<p>' .$tax_text. '</p>'; ?>
+						<?php echo '<p>' .$tax_text.'</p>'; ?>
 					</div>
 
 					<?php

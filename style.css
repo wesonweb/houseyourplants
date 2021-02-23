@@ -48,6 +48,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
   --button-color: #8f425a;
   --link-color: #8f425a;
   --green: #506d37;
+  --bg-light-green: rgb(242, 249, 224, 0.2);
 }
 body,
 button,
@@ -492,7 +493,6 @@ p.scientific-name {
   .plant-intro-section h2.plant-title,
   .plant-intro-section span.scientific-name {
     display: block;
-    width: 90%;
     margin: auto;
   }
   /*quick care plant info*/
@@ -639,7 +639,8 @@ select:hover {
 .form-select::after {
   position: absolute;
   content: "\25BC";
-  background: #84954f;
+  /* background: #84954f; */
+  background: var(--link-color);
   color: #fff;
   top: 0;
   right: 0;
@@ -1195,9 +1196,9 @@ a.prev {
 }
 
 .what-do-now {
-  background: #f8f6ea;
+  background: var(--bg-light-green);
   clear: both;
-  padding: 20px 0;
+  padding: 2rem 0;
 }
 
 .results p {
@@ -1560,7 +1561,7 @@ form {
 }
 
 .form-container {
-  background: url(images/dieffenbachia-bg.jpg) 50% 50% no-repeat;
+  background: url(images/dieffenbachia-bg.jpg) center center no-repeat;
   background-size: cover;
   width: 100%;
 }
@@ -1629,7 +1630,7 @@ input#search-button:hover {
 
   input#search-button {
     width: 50%;
-    margin: 10px auto;
+    margin: 2rem auto 0;
     font-size: 1.45rem;
     border: 2px solid rgba(0, 0, 0, 0.25);
   }
@@ -1681,7 +1682,10 @@ input#search-button:hover {
   transition: 0.1s ease-out;
   display: block;
   margin-bottom: 20px;
-  /* display: flex; */
+  display: flex;
+}
+.plant-entry .container {
+  display: flex;
 }
 
 .plant-entry .summary {
@@ -1692,7 +1696,7 @@ input#search-button:hover {
 }
 
 .plant-entry .summary a.button {
-  margin-top: 2rem;
+  margin-top: auto;
   align-self: flex-end;
   padding: 1rem;
 }
@@ -1798,10 +1802,6 @@ img.secondary-plant-image {
   width: 100%;
 }
 
-.main-plant__name {
-  max-width: 500px;
-  margin: auto;
-}
 /*********************************************************************
 	INDIVIDUAL PLANT POSTS - ROOM/POSITON/CARE-LEVEL INFO
  *****************************************************************************/
@@ -1831,7 +1831,7 @@ img.secondary-plant-image {
 .chosen-plant-summary p a {
   display: inline-block;
   position: relative;
-  color: #698550;
+  color: var(--link-color);
 }
 
 .chosen-plant-summary p a::after {
@@ -1904,6 +1904,8 @@ section.quick-care-section p {
   padding: 30px 0 20px;
   display: flex;
   flex-direction: column;
+  background: var(--bg-light-green);
+  margin-bottom: 2rem;
 }
 /* lighting styling covered first */
 .care-info h3 span.lighting,
@@ -2340,7 +2342,7 @@ ul.detailed-care-info {
 }
 
 .plant-info h3 {
-  font-size: 1.2em;
+  font-size: 1.1rem;
   text-align: center;
 }
 
@@ -2380,7 +2382,7 @@ p.plant-problem {
 @media (min-width: 850px) {
   /*quick care info */
   .plant-info p {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
   }
   /*LINKS*/
   h2.plant-title a {
