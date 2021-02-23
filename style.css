@@ -1567,7 +1567,6 @@ form {
 }
 
 .searchform-contents {
-  background-color: rgba(0, 0, 0, 0.65);
   /* display: flex; */
   flex-direction: column;
   justify-content: space-evenly;
@@ -1577,7 +1576,7 @@ form {
 }
 
 .searchform-contents > div {
-  flex-basis: 275px;
+  flex-basis: 255px;
   margin: 0 4px;
 }
 
@@ -1630,7 +1629,7 @@ input#search-button:hover {
 
   input#search-button {
     width: 50%;
-    margin: 2rem auto 0;
+    margin: 0 auto 2rem;
     font-size: 1.45rem;
     border: 2px solid rgba(0, 0, 0, 0.25);
   }
@@ -2255,6 +2254,7 @@ ul.detailed-care-info {
   }
   #plant-searchform {
     width: 100%;
+    background-color: rgba(0, 0, 0, 0.65);
   }
   .care-level-choice h3,
   .position-choice h3,
