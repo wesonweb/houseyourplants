@@ -27,6 +27,6 @@
 	</footer>
 	<?php wp_footer(); ?>
 	</div><!-- #page -->
-	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/scripts.js"></script>
+
 	</body>
 </html>
