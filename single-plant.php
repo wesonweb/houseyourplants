@@ -46,8 +46,11 @@
 								<img src=<?php the_field("primary_plant_photo"); ?>
 								class="main-plant-image"  alt="<?php the_title(); ?>" />
 							</div> <!-- end main-plant-image div -->
-							<h2 class="plant-title"><?php the_title(); ?></h2>
-							<span class="scientific-name"><?php the_field("scientific_name") ?></span>
+							<div class="main-plant__name">
+								<h2 class="plant-title"><?php the_title(); ?></h2>
+								<span class="scientific-name"><?php the_field("scientific_name") ?></span>
+							</div>
+							
 						</section>
 						<!-- end plant intro section -->
 						<!-- quick care info section starts -->

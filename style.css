@@ -43,6 +43,12 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 /*--------------------------------------------------------------
 #
 --------------------------------------------------------------*/
+
+:root {
+  --button-color: #8f425a;
+  --link-color: #8f425a;
+  --green: #506d37;
+}
 body,
 button,
 input,
@@ -69,7 +75,7 @@ i {
 }
 
 blockquote {
-  border-left: 7px solid #b21f1f;
+  border-left: 7px solid #000;
   padding-left: 15px;
   margin: 15px 0;
 }
@@ -155,7 +161,8 @@ html {
 
 body {
   background: #fefcf2; /* Fallback for when there is no custom background color defined. */
-  background: #fffdf0;
+  /* background: #fffdf0; */
+  background: rgb(255, 253, 240, 0.12);
 }
 
 .container {
@@ -276,7 +283,8 @@ h4,
 h5,
 h6 {
   font-family: Rosario;
-  color: #9f3255;
+  /* color: #9f3255; */
+  color: #6d8656;
   clear: both;
 }
 
@@ -310,6 +318,10 @@ h2.plant-title {
   text-align: center;
   display: block;
   font-weight: normal;
+}
+
+h2.entry-title {
+  padding: 1rem 0;
 }
 
 h2.entry-title a {
@@ -380,6 +392,7 @@ h3 {
 }
 
 /*LINKS*/
+
 h2.plant-title a {
   font-size: 1.1em;
 }
@@ -806,10 +819,13 @@ label {
   display: block;
   width: 200px;
   margin: auto;
+  transition: transform 0.5s ease-in-out;
 }
 
 .site-branding h1 a img:hover {
-  transform: perspective(500px) translate3d(0px, 0px, 20px);
+  /* transform: perspective(500px) translate3d(0px, 0px, 20px); */
+  /* transform: scale(1.02); */
+  transform: scale(1.025) translateY(10px);
 }
 
 .site-navigation {
@@ -834,7 +850,7 @@ nav ul li a:visited,
 nav ul li a:active {
   text-decoration: none;
   display: block;
-  font-size: 1.1em;
+  /* font-size: 1.1em; */
   width: 100%;
   font-family: Lato;
   padding: 15px 0;
@@ -963,10 +979,11 @@ nav ul li a:active {
 --------------------------------------------------------------*/
 a,
 a:visited {
-  color: #506d37;
+  /* color: #506d37; */
+  color: var(--link-color);
   text-decoration: none;
   font-size: 1.1em;
-  border-bottom: 2px solid #698650;
+  border-bottom: 2px solid var(--link-color);
   /*display: block;*/
   -webkit-transition: color 0.3s ease;
   -moz-transition: color 0.3s ease;
@@ -995,8 +1012,9 @@ a.button:visited {
   margin: 2rem 0;
   max-width: 270px;
   padding: 1rem;
-  background: #84a06a;
-  background: #6d8656;
+  /* background: #84a06a;
+  background: #6d8656; */
+  background-color: #8f425a;
   border: 0;
   display: block;
   /*width: 175px;*/
@@ -1010,7 +1028,8 @@ a.button:visited {
 a.button:hover,
 a.button:active,
 a.button:focus {
-  background: #8f425a;
+  /* background: #8f425a; */
+  background-color: #6d8656;
 }
 
 /*Post and page navigation*/
@@ -1339,7 +1358,8 @@ a.next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(63, 55, 54, 0.63);
+  /* background-color: rgba(63, 55, 54, 0.63); */
+  background-color: rgb(16, 21, 15, 0.63);
   text-align: left;
   padding: 2rem;
 }
@@ -1507,8 +1527,9 @@ p.scientific-name {
 	FIND YOUR PLANT PAGE
  ***********************************************************************/
 .featured-plants-homepage .plantfinder-intro {
-  background-color: rgba(176, 169, 152, 0.1);
-  background-color: #8a4155;
+  background-color: #667334;
+  /* background-color: #8a4155; */
+
   margin: 0;
   padding: 10px;
 }
@@ -1680,8 +1701,9 @@ h2.entry-title,
 span.entry-title {
   display: block;
   font-family: Rosario;
-  color: #eeeee2;
-  color: #9f3255;
+  /* color: #eeeee2; */
+  /* color: #9f3255; */
+  color: var(--green);
   font-weight: bold;
   text-align: center;
   font-size: 2.1rem;
@@ -1767,7 +1789,8 @@ span.scientific-name {
 }
 
 img.main-plant-image {
-  width: 100%;
+  max-width: 100%;
+  display: block;
   /*padding: 2px;*/
 }
 
@@ -1775,6 +1798,10 @@ img.secondary-plant-image {
   width: 100%;
 }
 
+.main-plant__name {
+  max-width: 500px;
+  margin: auto;
+}
 /*********************************************************************
 	INDIVIDUAL PLANT POSTS - ROOM/POSITON/CARE-LEVEL INFO
  *****************************************************************************/
@@ -1887,12 +1914,12 @@ section.quick-care-section p {
 .care-info h3 span.pests {
   font-size: 0.85em;
   text-transform: uppercase;
-  padding: 1% 0 1% 2%;
-  margin: 20px 0;
+  padding: 1rem;
+  margin: 2rem 0 1rem;
   text-align: left;
   background: #fcab07;
   background: #e7b32c;
-  border: 4px solid #ecc051;
+  /* border: 4px solid #ecc051; */
   color: #fff8e0;
   letter-spacing: 2px;
   display: block;
@@ -1907,25 +1934,25 @@ section.quick-care-section p {
 }
 .care-info h3 span.watering {
   background: #88c4d7;
-  border: 4px solid #a7d3e2;
+  /* border: 4px solid #a7d3e2; */
 }
 .care-info h3 span.humidity {
   background: #96aac0;
-  border: 4px solid #acbccd;
+  /* border: 4px solid #acbccd; */
 }
 .care-info h3 span.feeding {
   background: #7a4a2a;
   background: #c08c40;
-  border: 4px solid #c99f5e;
+  /* border: 4px solid #c99f5e; */
 }
 .care-info h3 span.temperature {
   background: #be1921;
   background: #e5343d;
-  border: 4px solid #e7464e;
+  /* border: 4px solid #e7464e; */
 }
 .care-info h3 span.pests {
   background: #7b8c93;
-  border: 4px solid #97a4aa;
+  /* border: 4px solid #97a4aa; */
 }
 .care-info p {
   width: 95%;
@@ -1957,6 +1984,7 @@ p.plant-answer {
 @media (min-width: 710px) {
   .quick-care-guide {
     flex-direction: row;
+    max-width: 800px;
     /* justify-content: space-between; */
   }
 } /*end media query */
@@ -1964,6 +1992,7 @@ p.plant-answer {
 @media (min-width: 1000px) {
   .intro-container {
     flex-direction: row;
+    justify-content: center;
   }
   /*SECTIONS*/
   /*.plant-intro-section,*/
@@ -1973,14 +2002,19 @@ p.plant-answer {
   .house-plant-care-section,
   .first-aid-section,
   .disqus {
-    margin: 0 auto 0;
+    margin: 2rem auto 0;
+  }
+  .plant-intro-section {
+    max-width: 500px;
   }
   .first-aid-section h3 {
     text-align: center;
   }
   .main-plant-image-container .main-plant-image {
-    margin: 0 auto;
-    width: 90%;
+    max-height: 500px;
+    object-fit: contain;
+    /* margin: 0 auto; */
+    /* width: 90%; */
   }
   img.main-plant-image,
   img.secondary-plant-image,
@@ -2285,15 +2319,15 @@ ul.detailed-care-info {
 	INDIVIDUAL PLANT POSTS - ROOM/POSITON/CARE-LEVEL INFO >650px
  ******************************************************************************/
 .main-plant-image-container {
-  width: 100%;
+  /* width: 100%;
   display: block;
   margin: 0;
-  padding: 0;
+  padding: 0; */
 }
 
 .main-plant-image-container .main-plant-image {
-  display: block;
-  margin: auto;
+  /* display: block;
+  margin: auto; */
   /*width: 75%;*/
 }
 
@@ -2492,8 +2526,8 @@ select:focus {
 
 img.main-plant-image {
   /*width: 50%;*/
-  display: block;
-  margin: auto;
+  /* display: block;
+  margin: auto; */
 }
 
 .care-info {
@@ -2541,6 +2575,7 @@ p.plant-answer {
 @media (min-width: 1000px) {
   .quick-care-section {
     align-self: center;
+    margin: 0;
   }
 } /*end media query */
 
