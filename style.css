@@ -992,9 +992,9 @@ a:active {
 
 a.button,
 a.button:visited {
-  margin: 2% 0;
+  margin: 2rem 0;
   max-width: 270px;
-  padding: 1%;
+  padding: 1rem;
   background: #84a06a;
   background: #6d8656;
   border: 0;
@@ -1003,7 +1003,7 @@ a.button:visited {
   color: #fff;
   cursor: pointer;
   font-size: 1.2em;
-  border: 3px solid #98af83;
+  /* border: 3px solid #98af83; */
   transition: 0.35s ease-in;
 }
 
@@ -1011,7 +1011,6 @@ a.button:hover,
 a.button:active,
 a.button:focus {
   background: #8f425a;
-  border: 3px solid #9d4863;
 }
 
 /*Post and page navigation*/
@@ -1341,9 +1340,8 @@ a.next {
   top: 50%;
   transform: translateY(-50%);
   background-color: rgba(63, 55, 54, 0.63);
-  border: 1px solid #7d896e;
   text-align: left;
-  padding: 20px;
+  padding: 2rem;
 }
 
 .welcome-message h2,
@@ -1353,26 +1351,20 @@ a.next {
 }
 
 .welcome-message h2 {
-  margin-top: 1%;
-  padding: 1% 3%;
   font-size: 1.7em;
   font-weight: normal;
 }
 
 .welcome-message h3 {
-  padding: 1% 3% 0%;
   font-size: 1.25em;
   font-weight: normal;
 }
 
 .welcome-message p {
-  margin-top: 2%;
-  padding: 0 0 1% 3%;
   font-size: 1.1em;
 }
 
 .welcome-message a.button {
-  margin: 5% 0 5% 2%;
   font-size: 1.2em;
 }
 
@@ -1547,22 +1539,24 @@ form {
 }
 
 .form-container {
-  background: url(images/dieffenbachia-bg.jpg) 50% 50% fixed no-repeat;
+  background: url(images/dieffenbachia-bg.jpg) 50% 50% no-repeat;
   background-size: cover;
   width: 100%;
-  padding-bottom: 1px;
 }
 
 .searchform-contents {
   background-color: rgba(0, 0, 0, 0.65);
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
   justify-content: space-evenly;
   align-content: center;
+  padding: 2rem;
+  margin: 2rem 0;
 }
 
 .searchform-contents > div {
-  flex-basis: 30%;
+  flex-basis: 275px;
+  margin: 0 4px;
 }
 
 input#search-button {
@@ -1576,8 +1570,8 @@ input#search-button {
   border: none;
   width: 100%;
   text-align: center;
-  margin: 0px auto;
-  padding: 6px;
+  margin: 1.5rem auto;
+  padding: 1rem;
   cursor: pointer;
   border-radius: 0;
   -webkit-appearance: none;
@@ -1604,13 +1598,14 @@ input#search-button:hover {
     font-size: 1.425rem;
   }
   .form-container {
-    height: 500px;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-content: center;
     align-items: center;
     /* padding: 30px 0 50px; */
   }
+
   input#search-button {
     width: 50%;
     margin: 10px auto;
@@ -1622,8 +1617,10 @@ input#search-button:hover {
     margin: auto;
   }
   .searchform-contents {
+    display: flex;
     flex-direction: row;
     align-items: center;
+    margin: 0;
   }
 } /* end media query 720px */
 
@@ -2129,11 +2126,11 @@ p.plant-answer {
  *********************************************************************/
 
 .welcome-message {
-  width: 80%;
+  /* width: 80%; */
 }
 
 .welcome-message p {
-  font-size: 1.1em;
+  /* font-size: 1.1em; */
 }
 
 /*******************************************
@@ -2194,7 +2191,7 @@ ul.detailed-care-info {
     text-align: center;
   }
   .welcome-message {
-    width: 50%;
+    /* width: 50%; */
   }
   /*fixes bug with a.button link collapsing*/
   .featured-plant a {
@@ -2366,19 +2363,19 @@ nav {
  **********************************************************/
 
 .welcome-message h2 {
-  margin-top: 1%;
-  padding: 1% 3%;
+  /* margin-top: 1%;
+  padding: 1% 3%; */
   font-size: 1.7em;
 }
 
 .welcome-message h3 {
-  padding: 1% 3% 0%;
+  /* padding: 1% 3% 0%; */
   font-size: 1.35em;
 }
 
 .welcome-message p {
-  margin-top: 2%;
-  padding: 0 0 1% 3%;
+  /* margin-top: 2%; */
+  /* padding: 0 0 1% 3%; */
   font-size: 1.2em;
 }
 

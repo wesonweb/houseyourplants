@@ -12,13 +12,13 @@
 						</div>
 					</div><!--end plantfinder intro -->
 				<div class="form-container">
-				<form method="POST"	action="../find-your-plant-search" id="plant-searchform" class="searchform clearfix">
+				<form method="POST"	action="../find-your-plant-search" id="plant-searchform" class="searchform container clearfix">
 
-							<div class="searchform-contents container clearfix">
+							<div class="searchform-contents clearfix">
 								<!-- choose a room -->
 								<div class="room-choice">
 									<!-- <h3>I want a plant for...</h3> -->
-										<label for='room'>Where is the plant for?</label>
+										<label for='room'>Which room is the plant for?</label>
 											<div class="form-select">
 												<?php
 												//create first taxonomy drop down for room
@@ -55,7 +55,7 @@
 
 								<div class="care-level-choice">
 									<!-- <h3>And do you want the plant to be easy to care for? Or more difficult?</h3> -->
-									<label for='care_level'>What level of care?</label>
+									<label for='care_level'>How difficult a plant to look after?</label>
 										<div class="form-select">
 											<?php
 											//create third drop down taxonomy for position
