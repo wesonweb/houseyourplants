@@ -12,7 +12,7 @@
 					</div>
 				</div> <!-- end featured plant intro -->
 
-				<div class="featured-plant-content">
+				<div class="featured-plant-content content-container">
 					<?php the_content(); ?>
 				</div> <!-- end featured-plant-content -->
 
