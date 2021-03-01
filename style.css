@@ -305,12 +305,6 @@ h2 {
   font-size: 1.625em;
 }
 
-h2.page-title {
-  font-size: 1.4em;
-  padding-bottom: 20px;
-  text-transform: uppercase;
-}
-
 h2.plant-title {
   color: #9f3255;
   color: #fff;
@@ -393,7 +387,9 @@ h2 {
 
 h2.page-title {
   font-size: 1.5em;
-  margin-top: 5%;
+  margin: 2rem 0;
+  font-size: 1.4em;
+  /* padding-bottom: 20px; */
 }
 
 h3 {
@@ -863,7 +859,6 @@ nav ul li a:active {
   padding: 15px 0;
   color: #fff; /*darker green */
   border-bottom: none;
-  text-transform: uppercase;
   font-weight: bold;
   text-align: center;
   letter-spacing: 1px;
