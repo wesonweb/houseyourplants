@@ -1013,19 +1013,15 @@ a:active {
 
 a.button,
 a.button:visited {
-  margin: 2rem 0;
+  margin: 1rem 0;
   max-width: 270px;
   padding: 1rem;
-  /* background: #84a06a;
-  background: #6d8656; */
   background-color: #8f425a;
   border: 0;
   display: block;
-  /*width: 175px;*/
   color: #fff;
   cursor: pointer;
   font-size: 1.2em;
-  /* border: 3px solid #98af83; */
   transition: 0.35s ease-in;
 }
 
@@ -1697,7 +1693,6 @@ input#search-button:hover {
 }
 
 .plant-entry .summary a.button {
-  margin-top: auto;
   align-self: flex-end;
   padding: 1rem;
 }
@@ -1734,8 +1729,7 @@ h2.entry-title {
 
 .plant-entry a.button {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 2rem auto 0;
   font-size: 1.2em;
   font-size: 1.3rem;
   text-align: center;
@@ -2498,13 +2492,6 @@ select:focus {
 .post-navigation {
   width: 95%;
   margin: 5% auto 0;
-}
-
-/********************************************************************
-	PLANT RESULTS PAGE
- *********************************************************************/
-.plant-entry a.button {
-  text-align: center;
 }
 
 /*****************************************************************
