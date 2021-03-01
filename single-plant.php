@@ -53,7 +53,7 @@
 						</section>
 						<!-- end plant intro section -->
 						<!-- quick care info section starts -->
-						<section class="quick-care-section container clearfix">
+						<section class="quick-care-section">
 							<h3 class="section-title">Quick care guide</h3>
 								<ul class="quick-care-guide container">
 
@@ -144,38 +144,69 @@
 						<h3 class="section-title">Caring for your <?php the_title(); ?></h3>
 						<ul class="detailed-care-info clearfix">
 							<li class="care-info">
-								<h3><span class="lighting">lighting</span></h3>
+								<div class="care-info__header">
+									<img src="<?php echo get_stylesheet_directory_uri(); 							?>/images/icons/sunshine.svg"
+									class="quick-care-icon"
+									alt="lighting icon" width="40" height="40" />
+									<h3>lighting</h3>
+								</div>
 								<p><?php the_field("detailed_lighting"); ?></p>
 							</li>
 							<!-- end care info div -->
 							<li class="care-info">
-								<h3><span class="watering">watering</span></h3>
+								<div class="care-info__header">
+									<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icons/watering.svg"
+										class="quick-care-icon"
+										alt="watering icon" width="40" height="40" />
+									<h3>watering</h3>
+								</div>
 								<p><?php the_field("detailed_watering"); ?></p>
 							</li>
+							
 							<!-- end care info div -->
 
 							<li class="care-info">
-								<h3><span class="humidity">humidity</span></h3>
-									<p><?php the_field("detailed_humidity"); ?></p>
+								<div class="care-info__header">
+									<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icons/humidity.svg"
+										class="quick-care-icon"
+										alt="watering icon" width="40" height="40" />
+									<h3>humidity</h3>
+								</div>
+								<p><?php the_field("detailed_humidity"); ?></p>
+							</li>
+							<!-- end care info div -->
+							<li class="care-info">
+								<div class="care-info__header">
+									<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icons/feeding.svg"
+										class="quick-care-icon"
+										alt="watering icon" width="40" height="40" />
+									<h3>feeding</h3>
+								</div>
+								<p><?php the_field("detailed_feeding"); ?></p>
 							</li>
 							<!-- end care info div -->
 
 							<li class="care-info">
-								<h3><span class="feeding">feeding</span></h3>
-									<p><?php the_field("detailed_feeding"); ?></p>
+								<div class="care-info__header">
+									<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icons/temperature.svg"
+										class="quick-care-icon"
+										alt="watering icon" width="40" height="40" />
+									<h3>temperature</h3>
+								</div>
+								<p><?php the_field("detailed_temperature"); ?></p>
 							</li>
 							<!-- end care info div -->
 
 							<li class="care-info">
-								<h3><span class="temperature">temperature</span></h3>
-									<p><?php the_field("detailed_temperature"); ?></p>
+								<div class="care-info__header">
+									<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icons/pests.svg"
+										class="quick-care-icon"
+										alt="watering icon" width="40" height="40" />
+									<h3>pests</h3>
+								</div>
+								<p><?php the_field("pests"); ?></p>
 							</li>
-							<!-- end care info div -->
-
-							<li class="care-info">
-								<h3><span class="pests">pests</span></h3>
-									<p><?php the_field("pests"); ?></p>
-							</li>
+							
 							<!-- end care info div -->
 						</ul> <!-- end detailed care info div -->
 					</section>
