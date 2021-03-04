@@ -70,6 +70,7 @@ textarea {
 footer {
   clear: both;
   width: 100%;
+  padding: 2rem 0;
 }
 
 dfn,
@@ -820,20 +821,21 @@ label {
 }
 
 .site-branding {
-  width: 70%;
-  margin: auto;
 }
 
+#masthead {
+  display: flex;
+  flex-direction: column;
+}
 .site-branding h1 a img {
   display: block;
-  width: 200px;
+  height: 180px;
+  object-fit: contain;
   margin: auto;
   transition: transform 0.5s ease-in-out;
 }
 
 .site-branding h1 a img:hover {
-  /* transform: perspective(500px) translate3d(0px, 0px, 20px); */
-  /* transform: scale(1.02); */
   transform: scale(1.025) translateY(10px);
 }
 
@@ -877,6 +879,15 @@ nav ul li a:active {
 }
 
 @media (min-width: 710px) {
+  #masthead {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .site-branding {
+    max-width: 180px;
+  }
   nav ul li a,
   nav ul li a:visited {
     color: #506d37; /*darker green */
@@ -891,22 +902,19 @@ nav ul li a:active {
     margin: 0;
   }
   ul.nav-menu {
-    display: inline-block;
-    float: right;
     margin-top: 55px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
   }
   ul#primary-menu li {
     display: inline-block;
     text-align: right;
   }
   .site-branding {
-    width: 20%;
-    float: left;
   }
   .main-navigation {
-    clear: none;
-    width: 80%;
-    float: right;
+    flex-grow: 1;
   }
   .menu-toggle {
     display: none;
@@ -915,7 +923,6 @@ nav ul li a:active {
     display: block;
   }
   .main-navigation li {
-    float: left;
   }
 } /* end media 710px */
 
@@ -924,8 +931,6 @@ nav ul li a:active {
     margin-top: 70px;
   }
   .main-navigation {
-    width: 79%;
-    float: right;
   }
 } /*end media query */
 
@@ -1547,7 +1552,7 @@ p.scientific-name {
 
 .plantfinder-intro {
   background-color: rgba(176, 169, 152, 0.1);
-  padding: 20px 0;
+  padding: 2rem 0;
 }
 
 form {
@@ -1620,7 +1625,7 @@ input#search-button:hover {
   .plantfinder-intro p {
     width: 65%;
     text-align: center;
-    margin: 20px auto 30px;
+    margin: auto;
     font-size: 1.425rem;
   }
   .form-container {

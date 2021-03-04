@@ -16,7 +16,7 @@
 				<li><a href="http://www.pinterest.com/houseyourplants"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icons/pinterest.svg"
 				width="32" height="32" alt="follow on pinterest"></a></li>
 
-				<li><a href="http://www.instagram.com/houseyourplants"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icons/instagram-round.svg"
+				<li><a href="http://www.instagram.com/houseyourplants"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icons/instagram-round.png"
 				width="32" height="32"  alt="follow on instagram"></a></li>
 			</ul>
 		</div>
