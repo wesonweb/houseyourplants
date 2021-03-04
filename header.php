@@ -34,7 +34,7 @@
 	<div class="heading-container">
 		<header id="masthead" class="site-header clearfix container" role="banner">
 			<div class="site-branding clearfix">
-				<h1><a href="<?php bloginfo('url');?>" id="logo"> <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo-purple-v13.svg" class="logo" width="350" height="350" alt="houseyourplants logo"></a></h1>
+				<h1><a href="<?php bloginfo('url');?>" id="logo"> <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo-purple-v13.svg" class="logo" width="180" height="180" alt="houseyourplants logo"></a></h1>
 			</div><!-- .site-branding -->
 
 			<nav id="site-navigation" class="main-navigation clearfix ">
