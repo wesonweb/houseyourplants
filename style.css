@@ -4,7 +4,7 @@ Theme URI:
 Author: wes
 Author URI:
 Description: houseyourplants website
-Version: 2.2.0
+Version: 2.2.1
 
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
@@ -1675,6 +1675,7 @@ input#search-button:hover {
   }
   .form-container {
     margin: 50px 0;
+    padding: 50px 0;
   }
 }
 
