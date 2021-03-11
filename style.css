@@ -4,7 +4,7 @@ Theme URI:
 Author: wes
 Author URI:
 Description: houseyourplants website
-Version: 2.1.6
+Version: 2.1.7
 
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
@@ -1540,6 +1540,7 @@ p.scientific-name {
 /******************************************************************************
 	FIND YOUR PLANT PAGE
  ***********************************************************************/
+
 .featured-plants-homepage .plantfinder-intro {
   background-color: #667334;
   /* background-color: #8a4155; */
@@ -1647,7 +1648,7 @@ input#search-button:hover {
     font-size: 1.425rem;
   }
   .form-container {
-    height: 65vh;
+    height: 50vh;
   }
 
   input#search-button {
