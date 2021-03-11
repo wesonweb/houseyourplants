@@ -4,7 +4,7 @@ Theme URI:
 Author: wes
 Author URI:
 Description: houseyourplants website
-Version: 2.1.6
+Version: 2.2.1
 
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
@@ -1540,6 +1540,7 @@ p.scientific-name {
 /******************************************************************************
 	FIND YOUR PLANT PAGE
  ***********************************************************************/
+
 .featured-plants-homepage .plantfinder-intro {
   background-color: #667334;
   /* background-color: #8a4155; */
@@ -1595,12 +1596,10 @@ form {
 }
 
 .searchform-contents {
-  /* display: flex; */
   flex-direction: column;
   justify-content: space-evenly;
   align-content: center;
   padding: 0 2rem 2rem;
-  margin: 2rem 0;
 }
 
 .searchform-contents > div {
@@ -1630,12 +1629,6 @@ input#search-button:hover {
   background: #779126; /*purple*/
 }
 
-@media (min-width: 600px) {
-  .plantfinder-intro {
-    margin-top: 20px;
-  }
-} /*end media query */
-
 @media (min-width: 720px) {
   .plantfinder-intro h2 {
     margin-bottom: 0;
@@ -1645,9 +1638,6 @@ input#search-button:hover {
     text-align: center;
     margin: auto;
     font-size: 1.425rem;
-  }
-  .form-container {
-    height: 65vh;
   }
 
   input#search-button {
@@ -1683,11 +1673,15 @@ input#search-button:hover {
   .searchform-contents {
     padding: 25px 50px;
   }
+  .form-container {
+    margin: 50px 0;
+    padding: 50px 0;
+  }
+}
 
-  @meda (min-width: 1400px) {
-    .plantfinder-intro > div {
-      padding: 2rem 1rem 1rem;
-    }
+@media (min-width: 1400px) {
+  .plantfinder-intro > div {
+    padding: 2rem 1rem 1rem;
   }
 } /*end media query */
 

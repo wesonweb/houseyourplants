@@ -3,7 +3,6 @@
 		<!-- content START -->
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 		<?php endwhile; endif; ?>
-			
 		<div class="form-container">
 			<div class="plantfinder-intro">
 				<div class="container">
