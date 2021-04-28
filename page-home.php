@@ -29,7 +29,7 @@
 	      		if ($latest_plant-> have_posts() ) : while ( $latest_plant->have_posts() ) : $latest_plant->the_post(); ?>
 
 	            <div class="latest-post">
-								<a href="<?php the_permalink(); ?>" class="">
+								<a href="<?php the_permalink(); ?>" class="home__featured-plant">
 									<h2>Featured Plant</h2>
 									<?php the_post_thumbnail('medium'); ?>
 									<div class="summary">
