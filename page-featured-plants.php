@@ -9,7 +9,7 @@ wp_reset_postdata(); ?>
 			<div class="plantfinder-intro">
 				<h2 class="entry-title"><?php the_title(); ?></h2>
 			</div>
-				<div class="container">
+				<div class="plantfinder-intro__standfirst container">
 						<p>In this section we'll take a more in-depth look at some indoor plants and some of the more unusual plants that you can bring to your home.</p>
 				</div>
 
