@@ -1420,7 +1420,10 @@ a.next {
   padding: 25px 35px;
   background: #943b55;
 }
-
+.latest-post:hover,
+.latest-post:hover h2 {
+  background-color: var(--green);
+}
 .latest-post .summary {
   padding: 10px 0 20px 0;
 }
@@ -1431,7 +1434,7 @@ a.next {
   margin: 0;
 }
 
-.latest-post a {
+a.home__featured-plant {
   border-bottom: none;
 }
 
@@ -1478,13 +1481,6 @@ a.thumbnail-link {
   margin-left: -20px;
 }
 
-.featured-plant .wp-post-image,
-.featured-plant p {
-  margin: 2% 2% 0 0;
-  margin: 0;
-  float: none;
-}
-
 h2.plant-title a {
   color: #9f3255;
   font-size: 1em;
@@ -1495,29 +1491,15 @@ p.scientific-name {
   padding: 0;
 }
 
-.featured-plant a {
-  clear: left;
-}
-
 @media (min-width: 700px) {
   .why-plants {
     max-width: 45%;
     float: left;
     margin: 5% 5% 5% 0;
   }
-  .featured-plant {
-    width: 45%;
-    float: right;
-    margin: 5% 2.5%;
-  }
 } /*end media query */
 
 @media (min-width: 1200px) {
-  .featured-plant {
-    max-width: 45%;
-    float: right;
-    margin: 5% 5% 5% 0;
-  }
   .why-plants p {
     width: 100%;
   }
