@@ -4,7 +4,7 @@ Theme URI:
 Author: wes
 Author URI:
 Description: houseyourplants website
-Version: 2.2.2
+Version: 2.2.3
 
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
@@ -2029,11 +2029,8 @@ p.plant-answer {
 
 .featuredplant-container li {
   clear: both;
-  flex-basis: 48%;
-}
-
-.featuredplant-container li div {
-  position: relative;
+  flex-basis: 45%;
+  margin: 1rem;
 }
 
 .featuredplant-container li img {
@@ -2041,14 +2038,9 @@ p.plant-answer {
 }
 .featuredplant-container li div img {
   max-width: 100%;
-  position: relative;
 }
 
 .featuredplant-container li div h2 {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 0;
   color: #fff;
   background: #943b55;
   text-align: center;
@@ -2073,8 +2065,9 @@ p.plant-answer {
   .featuredplant-container {
     flex-direction: row;
     flex-wrap: wrap;
+    align-items: stretch;
   }
-  s .featuredplant-container li {
+  .featuredplant-container li {
     max-width: 50%;
   }
 }
@@ -2092,6 +2085,9 @@ p.plant-answer {
   text-align: center;
   margin: 0;
 }
+.featured-plant-name span.scientific-name {
+  background-color: #fff;
+}
 .featured-plant-name h2 {
   font-size: 1.8rem;
   letter-spacing: 2px;
@@ -2103,10 +2099,6 @@ p.plant-answer {
 
 .featured-plant-name h2 {
   color: #9e2848;
-}
-
-.featured-plant-name span.scientific-name {
-  background: #fffdf1;
 }
 
 .featured-plant-image {
