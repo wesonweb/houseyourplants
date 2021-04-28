@@ -53,6 +53,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
   --link-color: #8f425a;
   --green: #506d37;
   --bg-light-green: rgb(242, 249, 224, 0.2);
+  --br: 4px;
+  --br-lrg: 12px;
 }
 body,
 button,
@@ -1035,6 +1037,7 @@ a.button:visited {
   cursor: pointer;
   font-size: 1.2em;
   transition: 0.35s ease-in;
+  border-radius: var(--br);
 }
 
 a.button:hover,
@@ -1419,6 +1422,7 @@ a.next {
 .latest-post {
   padding: 25px 35px;
   background: #943b55;
+  border-radius: var(--br-lrg);
 }
 .latest-post:hover,
 .latest-post:hover h2 {
