@@ -10,28 +10,22 @@
 
 			</div>
 
-		<div class="plant-container container">
-
+		<div class="plant-container">
+				<ul>
 
 				<?php if(have_posts()) : while(have_posts()) : the_post(); //begin the loop ?>
 
-				 <div class="plant-entry">
-
+				 <li class="plant-entry">
+					<a href="<?php the_permalink();?>" class="results-link-image">
+						<?php the_post_thumbnail(); ?> 
+						<div class="summary">
 							<h2 class="entry-title"><?php the_title(); ?></h2>
 
-									<div class="summary">
-
-									 	<a href="<?php the_permalink();?>"><?php the_post_thumbnail(); ?> </a>
-
-										<?php the_excerpt(); ?>
-
-
-
-									<a href="<?php the_permalink(); ?>" class="button">View <?php the_title(); ?></a>
-									</div>
-
-
-						</div> <!-- end plant entry -->
+							<?php the_excerpt(); ?>
+							<!-- <span class="plant-entry-cta">View the <?php the_title(); ?></span> -->
+						</div>
+					</a>
+				</li> <!-- end plant entry -->
 
 				<?php endwhile;
 
