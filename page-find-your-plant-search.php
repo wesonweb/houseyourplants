@@ -7,6 +7,7 @@
 			<div class="results">
 				<div class="container">
 					<h2 class="page-title">We've found these plants</h2>
+					<p>Select a plant for more information</p>
 				</div>
 			</div>
 			<!-- end results div -->
@@ -65,25 +66,20 @@
 					$loop = new WP_Query( $args ); ?>
 
 					<!-- Display the plant result summaries -->
-
-					<ul class="plant-container">
+				<div class="plant-container">
+					<ul>
 
 						<?php	if ($loop-> have_posts() ) : while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
 						 <li class="plant-entry">
-							 <div class="container">
-
+							 <a href="<?php the_permalink();?>" class="results-link-image">
+									<?php the_post_thumbnail(); ?> 
 									<div class="summary">
-
-									 	<a href="<?php the_permalink();?>" class="results-link-image"><?php the_post_thumbnail(); ?> </a>
 										<h2 class="entry-title"><?php the_title(); ?></h2>
 
 										<?php the_excerpt(); ?>
-
-										<a href="<?php the_permalink(); ?>" class="button">View <?php the_title(); ?></a>
-
 									</div>
-								</div>
+							</a>
 							</li> <!-- end plant entry -->
 
 
@@ -99,6 +95,7 @@
 					<?php  endif; ?>
 
 				</ul> <!-- end plant container -->
+				</div>
 
 
 			<?php include ('inc/what-now-nav.php'); ?>

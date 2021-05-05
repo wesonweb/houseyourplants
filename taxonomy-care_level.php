@@ -7,20 +7,22 @@
 				<?php $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) ); echo $term->name; ?></h2>
 			</div>
 
-			<div class="plant-container container">
+			<div class="plant-container">
+				<ul>
 
 				<?php if(have_posts()) : while(have_posts()) : the_post(); //begin the loop ?>
 
-				 <div class="plant-entry">
-					<h2 class="entry-title"><?php the_title(); ?></h2>
+				 <li class="plant-entry">
+					<a href="<?php the_permalink();?>" class="results-link-image">
+						<?php the_post_thumbnail(); ?> 
 						<div class="summary">
-						 	<a href="<?php the_permalink();?>"><?php the_post_thumbnail(); ?> </a>
+							<h2 class="entry-title"><?php the_title(); ?></h2>
 
 							<?php the_excerpt(); ?>
-
-							<a href="<?php the_permalink(); ?>" class="button">View <?php the_title(); ?></a>
-						</div><!-- end summary -->
-				</div> <!-- end plant entry -->
+							<!-- <span class="plant-entry-cta">View the <?php the_title(); ?></span> -->
+						</div>
+					</a>
+				</li> <!-- end plant entry -->
 
 				<?php endwhile; endif ?>
 			</div><!-- end plant container -->
