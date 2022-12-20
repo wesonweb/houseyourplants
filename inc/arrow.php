@@ -1,0 +1,1 @@
+<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/arrow-brown.png" class="arrow" alt="arrow pointing to link">

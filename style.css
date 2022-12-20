@@ -1,0 +1,1927 @@
+/*
+Theme Name: houseyourplants-new
+Theme URI:
+Author: wes
+Author URI: wesleymehaffy.co.uk
+Description: houseyourplants website
+Version: 2.4.0
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Links
+	## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+	## Posts and pages
+	## Comments
+# Infinite scroll
+# Media
+	## Captions
+	## Galleries
+--------------------------------------------------------------*/
+
+/*COLOURS*/
+
+/*	HEADER background: 	#f1f1f1	light grey
+		BODY text color: 		#666 dark grey
+		button purple:			#8f425a
+*/
+
+
+/* ---COMPONENTS--- */
+/* layout */
+@import url(css/components/layout.css);
+/* card */
+@import url(css/components/card.css);
+/* forms */
+@import url(css/components/forms.css);
+/* banner */
+@import url(css/components/banner.css);
+/* buttons */
+@import url(css/components/buttons.css);
+/* where-next */
+@import url(css/components/where-next.css);
+/* featured plant */
+@import url(css/components/featured-plant.css);
+/* footer */
+@import url(css/components/footer.css);
+
+/* ---PAGES--- */
+/* home */
+@import url(css/pages/home.css);
+/* find-your-plant */
+@import url(css/pages/find-your-plant.css);
+
+/* ---PAGES--- */
+/* single plant */
+@import url(css/posts/single-plant.css);
+
+
+/*--------------------------------------------------------------
+#
+--------------------------------------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --purple: #9f3255;
+  --dark-purple: #8a2c4a;
+  --link-color: var(--green);
+  --green: #5e853c;
+  --dark-green: #405b28;
+  --bg-light-green: hsla(77, 68%, 93%, 0.2);
+  --white: #fff;
+  --text: #505453;
+  --br: 8px;
+  --br-lrg: 12px;
+
+  --fs-100: 1rem;
+  --fs-200: 1.125rem;
+  --fs-300: 1.375rem;
+  --fs-400: 1.625rem;
+  --fs-500: 1.9rem;
+
+
+  --box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 16px -1px,
+  rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+
+  --box-shadow-hover: rgba(0, 0, 0, 0.1) 0px 4px 16px -1px,
+  rgba(0, 0, 0, 0.06) 0px 2px 14px -1px;
+}
+
+@media (min-width: 45rem) {
+  :root {
+    --fs-100: 1.175rem;
+    --fs-200: 1.475rem;
+    --fs-300: 1.625rem;
+    --fs-400: 1.925rem;
+    --fs-500: 2.225rem;
+    --fs-600: 2.75rem;
+    --fs-700: 3.75rem;
+    --fs-800: 4.25rem;
+    --fs-900: 5.725rem;
+  }
+}
+
+
+/* utility classes */
+
+
+.br {
+  border-radius: 12px;
+}
+.br--md {
+  border-radius: 18px;
+}
+.br--lg {
+  border-radius: 24px;
+}
+
+/* background */
+.bg--dark {
+  background-color: hsla(110, 17%, 7%, 0.7);
+}
+/* typography */
+.text-white {
+  color: #fff;
+}
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+.ls-sm {
+  letter-spacing: 1px;
+}
+.ls-md {
+  letter-spacing: 2px;
+}
+.ls-lg {
+  letter-spacing: 3px;
+}
+/* margin and padding */
+.m-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+.mt-md {
+  margin-top: 2rem;
+}
+
+.p-sm {
+  padding: 1rem;
+}
+
+
+
+
+
+
+html {
+  scroll-behavior: smooth;
+}
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+  font-family: "Rosario", Lato, sans-serif;
+  color: var(--text);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+
+dfn,
+cite,
+em,
+i {
+  font-style: italic;
+}
+
+blockquote {
+  border-left: 7px solid var(--green);
+  padding-left: 15px;
+  margin: 15px 0;
+  background: #f9f9f9;
+  padding: 0.5em;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+blockquote:before {
+  color: #111;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.6em;
+  font-family: Gill Sans;
+}
+
+blockquote:after {
+  visibility: hidden;
+  color: #111;
+  content: close-quote;
+  font-size: 4em;
+  line-height: 0;
+  vertical-align: -0.4em;
+}
+
+blockquote p {
+  font-size: var(--fs-100);
+  line-height: 1.7;
+  width: 90%;
+}
+
+address {
+  margin: 0 0 1.5em;
+}
+
+pre {
+  background: #eee;
+  font-family: "Courier 10 Pitch", Courier, monospace;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  max-width: 100%;
+  overflow: auto;
+  padding: 1.6em;
+}
+
+code,
+kbd,
+tt,
+var {
+  font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+  font-size: 15px;
+  font-size: 0.9375rem;
+}
+
+abbr,
+acronym {
+  border-bottom: 1px dotted #666;
+  cursor: help;
+}
+
+mark,
+ins {
+  background: #fff9c0;
+  text-decoration: none;
+}
+
+big {
+  font-size: 125%;
+}
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+html {
+  box-sizing: border-box;
+}
+
+body {
+  background: #fefcf2; /* Fallback for when there is no custom background color defined. */
+}
+
+.content-container {
+  max-width: 700px;
+  margin: auto;
+}
+
+.site-header {
+  clear: both;
+  position: relative;
+}
+
+.heading-container {
+  width: 100%;
+}
+
+*,
+*:before,
+*:after {
+  /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+  box-sizing: inherit;
+}
+
+q:before,
+q:after {
+  content: "";
+}
+
+q {
+  quotes: "" "";
+}
+
+hr {
+  background-color: var(--green);
+  border: 0;
+  height: 1px;
+  margin-bottom: 1.5em;
+}
+
+ul {
+  list-style: disc;
+}
+
+ol {
+  list-style: decimal;
+}
+
+li > ul,
+li > ol {
+  margin-bottom: 0;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin: 0 1.5em 1.5em;
+}
+
+img {
+  height: auto; /* Make sure images are scaled correctly. */
+  max-width: 100%; /* Adhere to container width. */
+}
+
+figure {
+  margin: 1em 0; /* Extra wide images within figure tags don't overflow the content area. */
+}
+
+table {
+  margin: 0 0 1.5em;
+  width: 100%;
+}
+
+/*social media area*/
+
+.social-media h4 {
+  text-align: center;
+  padding: 0 0 5px;
+  color: var(--white);
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.social-media {
+  padding: 0 0 5px;
+}
+
+.social-icon {
+  filter: brightness(10);
+}
+.social-link:hover .social-icon {
+  filter: saturate(2);
+}
+.secondary-nav ul,
+ul.social-media-icons {
+  text-align: center;
+  padding-left: 0;
+}
+
+.secondary-nav ul li,
+.social-media-icons li {
+  list-style-type: none;
+  display: inline-block;
+}
+
+.social-media-icons li {
+  padding: 0 10px;
+}
+
+/*----------------------------------
+TYPOGRAPHY
+-----------------------------------*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Rosario;
+  /* color: #9f3255; */
+  color: var(--green);
+  color: var(--text);
+  clear: both;
+  margin-bottom: 12px;
+}
+
+h1 {
+  font-size: var(--fs-500);
+}
+
+h2 {
+  font-size: var(--fs-400);
+}
+
+h2.plant-title {
+  color: var(--green);
+  color: var(--purple);
+  font-weight: bold;
+  font-size: var(--fs-400);
+  background: #fcfdf7;
+  padding: 2px 0;
+  margin: 0;
+}
+
+/* .plant-intro-section h2.plant-title,
+.plant-intro-section span.scientific-name {
+  text-align: center;
+  display: block;
+  font-weight: normal;
+} */
+
+h2.entry-title {
+  padding: 1rem 0;
+}
+
+h2.entry-title a {
+  letter-spacing: 1px;
+}
+
+
+span.scientific-name {
+  font-style: italic;
+  padding: 2px 0;
+  color: #4d5151;
+  font-size: 1.2rem;
+  margin: 0;
+  text-align: center;
+  background: #fcfdf7;
+}
+
+h3 {
+  font-size: var(--fs-300);
+}
+
+.section-title {
+  font-size: var(--fs-500);
+  margin: 1rem 0 3rem;
+}
+
+h4 {
+  font-size: var(--fs-200);
+}
+
+h4 span.plant-problem {
+  font-weight: bold;
+  font-size: var(--fs-200);
+  color: var(--text);
+}
+
+p {
+  font-family: Lato, sans-serif;
+  font-size: var(--fs-100);
+  padding-bottom: 10px;
+  margin-bottom: 1rem;
+  color: var(--text);
+}
+
+p:last-child {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+p.no-plants-found {
+  /* font-size: 1.25em; */
+}
+
+h2 {
+  font-weight: 700;
+}
+
+h2.page-title {
+  font-size: var(--fs-600);
+  margin: 2rem 0;
+  /* padding-bottom: 20px; */
+}
+
+
+.plant-info h3 span {
+  display: block;
+  font-size: var(--fs-100);
+  margin-bottom: 10px;
+  color: var(--text);
+}
+
+h2.plant-title a {
+  font-size: var(--fs-200);
+}
+
+p {
+  font-family: Lato;
+  font-size: var(--fs-100);
+}
+
+p.copyright {
+  margin-top: 1rem;
+  color: var(--white);
+  text-align: center;
+  font-size: 0.935rem;
+}
+
+p.scientific-name {
+  font-style: italic;
+  padding: 0;
+}
+
+@media (min-width: 650px) {
+  h2 {
+    font-weight: 700;
+  }
+
+} /*end media query */
+
+@media (min-width: 710px) {
+  h3 {
+    /* font-size: 1.5em; */
+  }
+} /*end media query */
+
+@media (min-width: 850px) {
+  h2 {
+    font-weight: 700;
+  }
+
+  h4 span.plant-problem {
+    font-weight: bold;
+    font-size: var(--fs-300);
+    color: #656b6c;
+  }
+} /*end media query */
+
+@media (min-width: 1020px) {
+
+  h2 {
+    /* font-size: 1.5em; */
+    /*padding-bottom: 1%;*/
+    font-weight: 700;
+  }
+
+  .what-next {
+    width: 90%;
+    margin: 0 auto;
+  }
+} /*end media query */
+
+
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+
+.main-navigation ul {
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+.main-navigation a {
+  margin-right: 25px;
+}
+
+/*add transition to drop down child elements*/
+.main-navigation li ul {
+  visibility: hidden;
+  opacity: 0;
+  transition: 400ms ease-in;
+  filter: alpha (opacity=0);
+}
+
+.main-navigation ul > li:hover ul {
+  visibility: visible;
+  opacity: 1;
+  filter: alpha(opacity=100);
+  background: #f1f1f1;
+}
+/*end transitions*/
+
+.main-navigation ul ul {
+  /*box-shadow: 0 3px 3px rgba(0, 0, 0, 0.7);*/
+  float: left;
+  position: absolute;
+  top: 100%;
+  left: -999em;
+  z-index: 99999;
+  border-bottom: 1px solid #333;
+}
+
+.main-navigation ul ul ul {
+  left: -999em;
+  top: 0;
+}
+
+.main-navigation ul ul a {
+  display: block;
+  /* width: 150px; */
+}
+
+/*submenu*/
+.main-navigation ul ul li {
+  display: block;
+  /*background: #ddd;*/
+}
+
+.main-navigation li:hover > a,
+.main-navigation li.focus > a {
+  color: #333;
+}
+
+.main-navigation ul li:hover > ul,
+.main-navigation ul li.focus > ul {
+  left: auto;
+}
+
+.main-navigation ul ul li:hover > ul,
+.main-navigation ul ul li.focus > ul {
+  left: 100%;
+}
+
+.main-navigation .current_page_item > a,
+.main-navigation .current-menu-item > a,
+.main-navigation .current_page_ancestor > a,
+.main-navigation .current-menu-ancestor > a {
+  background: #000;
+}
+
+.main-navigation .active,
+.main-navigation .active > a,
+.main-navigation .active > a:hover {
+  border-bottom: 2px solid #9f3255;
+  color: var(--white);
+}
+
+/*add indicator for submenus*/
+.menu li.has-children > a:after {
+  color: #000;
+  content: " ▼";
+  font-size: 12px;
+  vertical-align: 1px;
+}
+.menu li li.has-children > a:after {
+  color: #000;
+  content: " ►";
+  font-size: 12px;
+  vertical-align: 1px;
+}
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+  display: block;
+  margin: auto;
+  background: #9f3255; /*purple*/
+  color: var(--white);
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  min-width: 300px;
+  max-width: 100%;
+}
+.menu-toggle {
+  padding: 1rem;
+  min-width: 300px;
+  max-width: 100%;
+}
+
+.main-navigation.toggled ul li {
+  border-bottom: 2px solid var(--white);
+}
+.main-navigation.toggled ul li a:hover {
+  color: #addd12;
+}
+
+#masthead {
+  display: flex;
+  flex-direction: column;
+}
+.site-branding a img {
+  display: block;
+  height: 150px;
+  object-fit: contain;
+  margin: auto;
+  transition: transform 0.5s ease-in-out;
+}
+
+.site-branding h1 a img:hover {
+  transform: scale(1.025) translateY(10px);
+}
+
+.site-navigation {
+  clear: both;
+  width: 100%;
+}
+
+/*--------------------------------------------------------------
+## Menus and navigation
+--------------------------------------------------------------*/
+
+nav ul li {
+  list-style-type: none;
+}
+
+nav ul li a {
+  transition: 0.25s ease;
+}
+
+nav ul li a,
+nav ul li a:visited,
+nav ul li a:active {
+  text-decoration: none;
+  display: block;
+  /* font-size: 1.1em; */
+  width: 100%;
+  font-family: Lato;
+  padding: 15px 0;
+  color: var(--white);
+  border-bottom: none;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.menu-main-nav-container {
+  text-align: right;
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (min-width: 710px) {
+  #masthead {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .site-branding {
+    max-width: 180px;
+  }
+  nav ul li a,
+  nav ul li a:visited {
+    color: var(--link-color); /*darker green */
+    font-size: 1.3rem;
+  }
+  .main-navigation .active,
+  .main-navigation .active > a,
+  .main-navigation .active > a:hover {
+    border-bottom: 2px solid #9f3255;
+    color: #9f3255;
+  }
+  .site-branding h1 a img {
+    margin: 0;
+  }
+  ul.nav-menu {
+    margin-top: 55px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  ul#primary-menu li {
+    display: inline-block;
+    text-align: right;
+  }
+  .site-branding {
+  }
+  .main-navigation {
+    flex-grow: 1;
+  }
+  .menu-toggle {
+    display: none;
+  }
+  .main-navigation ul {
+    display: block;
+  }
+  .main-navigation li {
+  }
+} /* end media 710px */
+
+@media (min-width: 850px) {
+  ul.nav-menu {
+    margin-top: 70px;
+  }
+  .main-navigation {
+  }
+} /*end media query */
+
+@media (min-width: 1000px) {
+  nav ul li a {
+    font-size: 1.35rem;
+  }
+  ul.nav-menu {
+    /*margin-top: 110px;*/
+  }
+} /*end media query */
+
+@media (min-width: 1200px) {
+  .navigation {
+    max-width: 64rem;
+  }
+  nav ul li {
+    margin-left: 10px;
+    margin-right: 0;
+  }
+  nav ul li a {
+    font-size: 1.5rem;
+  }
+} /*end media query 1200px */
+
+@media (min-width: 1800px) {
+  nav ul li a {
+    font-size: 1.65rem;
+  }
+} /*end media query */
+
+.secondary-nav ul li {
+  display: block;
+}
+
+.secondary-nav ul li a {
+  margin: 0 auto 2%;
+}
+
+.secondary-nav ul li a,
+.social-media li a,
+.secondary-nav ul li a:visited {
+  font-size: 1.1em;
+  color: #506d37;
+  display: inline-block;
+  font-weight: bold;
+  width: 100%;
+  padding: 1% 0;
+  border-bottom: none;
+}
+
+.secondary-nav ul li a:hover,
+.secondary-nav ul li a:focus {
+  color: #465936;
+  color: #8f425a; /*purple*/
+  border-bottom: none;
+}
+
+/*--------------------------------------------------------------
+## Links
+--------------------------------------------------------------*/
+a,
+a:visited {
+  color: var(--link-color);
+  text-decoration: none;
+  font-size: var(--fs-100);
+  border-bottom: 2px solid var(--link-color);
+  -webkit-transition: color 0.3s ease;
+  -moz-transition: color 0.3s ease;
+  -ms-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+a:hover,
+a:focus,
+a:active {
+  color: #8f425a;
+}
+
+a:focus {
+  outline: thin dotted;
+}
+
+a:hover,
+a:active {
+  outline: 0;
+}
+
+/* a.button,
+a.button:visited,
+input[type="submit"] {
+  margin: 1rem 0;
+  text-align: center;
+  max-width: 250px;
+  padding: 8px 12px;
+  background-color: var(--green);
+  border: 0;
+  display: block;
+  color: var(--white);
+  cursor: pointer;
+  font-size: var(--fs-200);
+  transition: 0.35s ease-in;
+  border-radius: var(--br);
+  letter-spacing: 1px;
+}
+
+a.button:hover,
+a.button:active,
+a.button:focus,
+input[type="submit"]:hover {
+  background-color: var(--purple);
+} */
+
+/* hide border bottom on logo */
+a#logo {
+  border-bottom: none;
+}
+a#logo:hover img {
+  transition: transform 1s ease-in-out;
+}
+a#logo:hover img {
+  transform: scale(1.05);
+}
+/*Post and page navigation*/
+
+/*posts*/
+span.post-navigation-title {
+  display: block;
+  text-align: center;
+}
+
+.site-main .comment-navigation,
+.site-main .posts-navigation,
+.site-main .post-navigation {
+  margin: 1em auto 1.5em;
+  overflow: hidden;
+}
+
+@media (min-width: 37em) {
+  .site-main .comment-navigation,
+  .site-main .posts-navigation,
+  .site-main .post-navigation {
+    width: 80%;
+  }
+} /*end media query */
+
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous {
+  float: left;
+  width: 50%;
+}
+
+.comment-navigation .nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next {
+  float: right;
+  text-align: right;
+  width: 50%;
+}
+
+/*pages*/
+.pagination h3 {
+  margin-bottom: 0;
+}
+
+.nav-links {
+  margin: 0 0 20px;
+}
+
+span.current,
+a.page-numbers {
+  font-size: 2rem;
+  padding: 3px;
+  margin-right: 5px;
+  text-decoration: none;
+}
+
+a.next,
+a.prev {
+  font-size: 1.5rem;
+}
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+.alignleft {
+  display: inline;
+  float: left;
+  margin-right: 1.5em;
+}
+
+.alignright {
+  display: inline;
+  float: right;
+  margin-left: 1.5em;
+}
+
+.aligncenter {
+  clear: both;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* for gutenberg */
+.alignwide,
+.alignfull {
+  margin: 32px calc(50% - 50vw);
+  max-width: 100vw;
+  width: 100vw;
+}
+
+@media (min-width: 920px) {
+  .alignwide {
+    margin: 32px calc((960px - 990px) / 2);
+    /* margin: 32px auto; */
+    max-width: 990px;
+    width: 990px;
+  }
+}
+
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+.sticky {
+  display: block;
+}
+
+.hentry {
+  margin: 0 0 1.5em;
+}
+
+.updated:not(.published) {
+  display: none;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+  margin: 1.5em 0 0;
+}
+
+.page-links {
+  clear: both;
+  margin: 0 0 1.5em;
+}
+
+.results,
+.post-navigation {
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.what-do-now {
+  padding: 2rem 1rem;
+}
+
+.results p {
+  font-size: var(--fs-200);
+}
+
+@media (min-width: 45em) {
+  .results {
+    margin-top: 4rem;
+  }
+}
+
+
+
+/*********************************************************************
+	POST PAGINATION STYLING
+ *******************************************************************/
+
+.post-navigation {
+  clear: both;
+  width: 100%;
+}
+
+.post-navigation h2 {
+  text-align: center;
+}
+
+/*individual page numbers*/
+.post-navigation a,
+.post-navigation .current,
+a.page-numbers {
+  color: var(--green);
+  font-size: var(--fs-200);
+  background: #5d7449;
+  padding: 5px 10px;
+  color: var(--white);
+  border-bottom: none;
+  display: inline-block;
+}
+
+a.page-numbers:hover,
+a.page-numbers:focus {
+  background: #8f425a;
+  color: var(--white);
+}
+
+/*styles the current page nav*/
+span.page-numbers.current {
+  font-size: var(--fs-200);
+  font-family: Lato;
+}
+
+.post-navigation .current {
+  background: #c1d0b4;
+}
+
+/*post navigation styling*/
+
+nav.navigation,
+nav.pagination {
+  width: 100%;
+  float: left;
+  padding: 0 0 3rem;
+  /*border-bottom: 3px solid #e2e2c6;*/
+}
+
+.nav-links {
+  text-align: center;
+  width: 95%;
+  margin: auto;
+}
+
+/*the text that goes before each page number*/
+a.prev,
+a.next {
+  font-size: var(--fs-200);
+  color: var(--green);
+  background: none;
+  padding: 10px;
+  border-bottom: none;
+}
+
+.meta-nav,
+.screen-reader-text {
+  font-family: Lato;
+}
+
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+/****************************************************************
+	404 <530px
+ ***************************************************************/
+
+.error-404 {
+  width: 90%;
+  margin: 3rem auto;
+}
+
+/**********************************************************
+	HOME PAGE <530px
+ **************************************************************/
+
+
+
+
+/***********************************************************************
+	HOME PAGE - WHY PLANTS & FEATURED PLANT
+ ******************************************************************/
+
+
+
+
+
+.latest-post {
+  padding: 25px 35px;
+  background: #943b55;
+  border-radius: var(--br-lrg);
+}
+.latest-post:hover,
+.latest-post:hover h2 {
+  background-color: var(--green);
+}
+.latest-post .summary {
+  padding: 10px 0 20px 0;
+}
+
+.latest-post h3,
+.latest-post p {
+  color: var(--white);
+  margin: 0;
+}
+
+a.home__featured-plant {
+  border-bottom: none;
+  transition: all ease-in-out 500ms;
+}
+
+.latest-post img {
+  max-width: 100%;
+}
+
+.latest-post h2 {
+  margin: 0px;
+  letter-spacing: 1px;
+  font-size: 1.75rem;
+  padding-bottom: 25px;
+  background: #943b55;
+  color: var(--white);
+  font-weight: normal;
+}
+
+.latest-post h3 {
+  border-top: 2px dotted var(--white);
+  padding: 10px 0;
+}
+
+.latest-post h3:hover {
+  border-top: 2px solid var(--white);
+}
+
+.latest-post h3:after {
+  content: "\25BA";
+  font-size: 24px;
+  margin-top: 6px;
+  margin-right: 20px;
+  padding: 0 0 10px 0;
+  color: var(--white);
+  float: right;
+}
+
+.featured-plant-title {
+  display: block;
+  padding: 10px 0;
+}
+
+a.thumbnail-link {
+  border-bottom: none;
+  margin-left: -20px;
+}
+
+h2.plant-title a {
+  color: #9f3255;
+  font-size: 1em;
+}
+
+p.scientific-name {
+  font-style: italic;
+  padding: 0;
+}
+
+
+@media (min-width: 1200px) {
+
+  .featured-plant h3 {
+    font-weight: bold;
+    letter-spacing: 2px;
+    padding: 0;
+  }
+} /* end media query 1200px */
+
+/******************************************************************************
+	FIND YOUR PLANT PAGE
+ ***********************************************************************/
+
+/* .find-your-plant-container {
+  margin-top: 50px;
+}
+
+
+.plantfinder-intro__standfirst {
+  max-width: 500px;
+  margin: 3rem auto;
+}
+
+.plantfinder-intro > div {
+  background-color: rgba(0, 0, 0, 0.65);
+  padding: 2rem 1rem;
+}
+.plantfinder-intro > div h2 span,
+.plantfinder-intro > div p {
+  margin-bottom: 1rem;
+  color: var(--white);
+  text-align: center;
+  letter-spacing: 2px;
+} */
+
+form {
+  max-width: 100%;
+}
+
+.searchform h2 {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: var(--white);
+  margin: 0;
+  padding: 10px 0 10px 20px;
+  background: rgba(0, 0, 0, 0.14);
+  text-align: center;
+}
+
+
+
+
+
+@media (min-width: 720px) {
+
+
+
+  label {
+    margin: auto;
+  }
+} /* end media query 720px */
+
+@media (min-width: 900px) {
+  label {
+    /* text-align: center; */
+    margin: auto;
+  }
+} /*end media query */
+
+@media (min-width: 1024px) {
+  /* input#search-button {
+    max-width: 250px;
+    border-radius: var(--br);
+  } */
+} /*end media query */
+
+@media (min-width: 1200px) {
+
+  .form-container {
+    margin: 50px 0;
+    padding: 50px 0;
+  }
+}
+
+@media (min-width: 1400px) {
+} /*end media query */
+
+/********************************************************************
+	PLANT RESULTS PAGE
+ *********************************************************************/
+.plant-container {
+  /* background-color: rgb(242 249 224 / 42%); */
+}
+.plant-container ul {
+  padding: 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-content: flex-start;
+  flex-wrap: wrap;
+}
+
+h2.entry-title,
+span.entry-title {
+  display: block;
+  font-family: Rosario;
+  /* color: #eeeee2; */
+  /* color: #9f3255; */
+  color: var(--green);
+  font-weight: bold;
+  text-align: center;
+  /* font-size: 2.1rem; */
+  letter-spacing: 2px;
+}
+
+h2.entry-title {
+  /* font-size: 1.6rem; */
+}
+
+.results h2.page-title,
+.results p {
+  text-align: center;
+}
+
+/*thumbnail is given the below class by wordpress*/
+.wp-post-image {
+  transition: ease 0.2s;
+}
+
+.summary a {
+  border-bottom: none;
+}
+
+
+
+/* --------------------------
+	PLANT INTRO SECTION
+-------------------------- */
+
+span.scientific-name {
+  font-style: italic;
+  font-weight: normal;
+}
+
+img.main-plant-image {
+  max-width: 100%;
+  display: block;
+  margin: auto;
+}
+
+img.secondary-plant-image {
+  width: 100%;
+}
+
+.main-plant__name {
+  margin-top: 1rem;
+}
+/*********************************************************************
+	INDIVIDUAL PLANT POSTS - ROOM/POSITON/CARE-LEVEL INFO
+ *****************************************************************************/
+
+
+
+
+/***************************************************************
+	INDIVIDUAL PLANT POSTS - QUICK CARE SECTION
+ *********************************************************************/
+/* .quick-care-info {
+  margin-bottom: 3rem;
+  flex-basis: 50%;
+} */
+
+img.quick-care-icon {
+  display: block;
+  margin: 0 auto;
+  padding-bottom: 1em;
+  /* width: 80px; */
+}
+
+
+
+/**************************************************************
+ INDIVIDUAL PLANT POSTS - QUICK CARE GUIDE
+************************************************************************/
+
+
+
+
+
+.detailed-care-info {
+  padding-left: 0;
+}
+
+/*Plant first aid/problems*/
+p.plant-problem {
+  padding: 2rem 0;
+  font-size: var(--fs-200);
+  font-weight: 700;
+  font-style: italic;
+}
+
+p.plant-answer {
+  padding: 2% 0 6%;
+}
+
+.first-aid-section {
+  border-bottom: 2px dotted #e2e2c6;
+  padding-bottom: 20px;
+}
+
+/*end media query */
+
+@media (min-width: 1000px) {
+
+
+
+  /* img.main-plant-image,
+  img.secondary-plant-image,
+  .plant-description-info {
+    width: 100%;
+  }
+  .plant-description-info {
+    margin-top: 25px;
+  }
+  .chosen-plant-summary p {
+    font-family: Lato;
+    width: 95%;
+    color: #2e3837;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 1em 0;
+  } */
+
+} /*end media query */
+
+
+
+/****************************************************************
+	FEATURED PLANTS LANDING PAGE
+**********************************************************************/
+
+
+.featuredplant-container li div img {
+  max-width: 100%;
+  height: 400px;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.featuredplant-container li div h2 {
+  color: var(--white);
+  text-align: center;
+  font-size: 1.75rem;
+  font-weight: 400;
+  margin: 0;
+  padding: 1rem 0;
+}
+
+
+
+/**************************************************************
+	FEATURED PLANTS INDIVIDUAL PAGE
+ *******************************************************************/
+
+.featured-plant-post {
+  max-width: 800px;
+}
+
+.featured-plant-name h3,
+.featured-plant-post h2,
+.featured-plant-post h2.page-title,
+h2.page-title {
+  text-align: center;
+  margin-bottom: 0;
+}
+.featured-plant-name span.scientific-name {
+  background-color: var(--white);
+}
+.featured-plant-name h2 {
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+}
+
+.featured-plant-intro {
+  margin: 2rem 0;
+}
+
+.featured-plant-name h2 {
+  color: #9e2848;
+}
+
+.featured-plant-image {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.featured-plant-content h3 {
+  margin-top: 1.5rem;
+  font-size: 1.4rem;
+}
+.featured-plant-content p img {
+  display: block;
+  margin: 1rem 0;
+}
+
+/*image container for images uploaded via wp-admin*/
+.featured-image {
+  padding-bottom: 20px;
+}
+
+.featured-plant-image img {
+  display: block;
+  margin: 5% auto;
+  padding: 1%;
+}
+
+.featured-plant-intro,
+.featured-plant-content {
+  width: 100%;
+}
+
+.what-do-now h2 {
+  text-align: center;
+}
+@media (min-width: 1000px) {
+  .featured-plant-post {
+    max-width: 1400px;
+    margin: 4rem auto;
+    display: flex;
+    justify-content: center;
+  }
+  .featured-plant-post h2,
+  .featured-plant-name h3 {
+    text-align: left;
+  }
+  .featured-plant-intro {
+    max-width: 300px;
+    margin: 3rem 2rem 0 0;
+  }
+  .featured-plant-content {
+    max-width: 600px;
+    margin: 0;
+  }
+}
+
+@media (min-width: 1800px) {
+  .featured-plant-name h2 {
+    font-size: 2.2rem;
+  }
+  .featured-plant-name h3 {
+    font-size: 1.6rem;
+  }
+  .featured-plant-content h3 {
+    margin-bottom: 10px;
+    font-size: 1.55rem;
+  }
+  .featured-plant-content p {
+    font-size: 1.35rem;
+  }
+}
+
+/**********************************************************
+	PLANT RESULTS PAGE
+ ***************************************************************/
+.results p {
+  font-size: 1.3rem;
+}
+
+/****************************************************************
+	INDIVIDUAL PLANT POSTS - DETAILED CARE GUIDE
+ *******************************************************************/
+ul.detailed-care-info {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  padding-left: 0;
+}
+
+.detailed-care-info > li {
+  list-style-type: none;
+}
+.care-info h3 {
+  text-align: left;
+}
+
+.care-info__header {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.care-info__header img {
+  max-width: 40px;
+  padding: 0;
+  margin: 0 1rem 0 0;
+}
+.care-info__header h3 {
+  color: var(--text);
+}
+
+.house-plant-care-section h2 {
+  text-align: left;
+}
+
+@media (min-width: 650px) {
+  .secondary-nav ul {
+    text-align: center;
+  }
+  .secondary-nav ul li {
+    list-style-type: none;
+    padding: 2%;
+    display: inline-block;
+  }
+  .secondary-nav ul li a {
+    font-size: 1.1em;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+  }
+  .error-404 {
+    width: 50%;
+    margin: 5% auto;
+    text-align: center;
+  }
+  .welcome-message {
+    /* width: 50%; */
+  }
+  /*fixes bug with a.button link collapsing*/
+  /* .featured-plant a {
+    clear: left;
+  } */
+
+
+  form select {
+    /*-webkit-appearance:none; */ /*remove all chrome styling */
+    outline: none;
+  }
+
+  .care-level-choice h3,
+  .position-choice h3,
+  .room-choice h3 {
+    padding-top: 2%;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 1%;
+    font-family: Lato;
+  }
+  .room-choice h2 {
+    font-size: 1.7em;
+    font-weight: bold;
+  }
+  .care-level-choice h3,
+  .position-choice h3,
+  .room-choice h3,
+  select {
+    width: 100%;
+  }
+  select {
+    display: block;
+  }
+  option {
+    margin: 3%;
+    font-size: 1.2em;
+  }
+} /*end media query */
+
+@media (min-width: 700px) {
+  .detailed-care-info {
+    margin: auto;
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-between;
+    /*align-items: center;*/
+  }
+  .detailed-care-info > li {
+    flex-basis: 30%;
+    padding: 0 12px;
+  }
+} /* end media query 700px */
+
+/************************************************************************
+	PLANT RESULTS TITLE STYLING
+ ************************************************************************/
+
+/*.what-do-now,*/
+.post-navigation {
+  width: 95%;
+  margin: 5% auto;
+}
+
+.what-next {
+  clear: both;
+}
+
+/**********************************************************************
+	INDIVIDUAL PLANT POSTS - ROOM/POSITON/CARE-LEVEL INFO >650px
+ ******************************************************************************/
+.main-plant-image-container {
+  /* width: 100%;
+  display: block;
+  margin: 0;
+  padding: 0; */
+}
+
+.main-plant-image-container .main-plant-image {
+  /* display: block;
+  margin: auto; */
+  /*width: 75%;*/
+}
+
+.chosen-plant-summary p {
+  padding: 2% 0;
+}
+
+/*Plant first aid/problems*/
+
+p.plant-problem {
+  font-size: 1.2em;
+}
+
+/*********************************************************
+	FEATURED PLANTS INDIVIDUAL PAGE >650px
+ **************************************************************/
+
+/*image container for images uploaded via wp-admin*/
+.featured-image {
+  height: auto;
+}
+
+/*************************************************************
+	FEATURED PLANTS INDIVIDUAL PAGE >650px
+ ************************************************************/
+
+.about-content {
+  width: 90%;
+  margin: 5% auto 0;
+}
+
+@media (min-width: 850px) {
+  /*quick care info */
+  .plant-info p {
+    /* font-size: var(--fs-100); */
+  }
+  h2.plant-title a {
+    font-size: 1.1em;
+  }
+} /* end media query 850px */
+
+/*******************************************************
+	NAVIGATION >850px
+ ************************************************/
+
+nav {
+  padding: 1rem 0;
+}
+
+/**********************************************************
+	HOME PAGE
+ **********************************************************/
+
+.welcome-message a.button {
+  /* font-size: 1.3em; */
+  /* max-width: 200px; */
+
+  letter-spacing: 2px;
+  margin-top: 1rem;
+}
+
+
+@media (min-width: 700px) {
+
+}
+
+/***********************************************************************
+	FIND YOUR PLANT PAGE
+ **************************************************************/
+
+.care-level-choice h3,
+.position-choice h3,
+.room-choice h3,
+select {
+  width: 100%;
+}
+
+select{
+  display: block;
+}
+
+@media (min-width: 1800px) {
+  label {
+    font-size: var(--fs-200);
+    padding: 6px 8px;
+    max-width: 300px;
+  }
+} /*end media query */
+
+/****************************************************************
+	PLANT RESULTS TITLE STYLING
+ *********************************************************************/
+.post-navigation {
+  width: 95%;
+  margin: 5% auto 0;
+}
+
+
+
+
+/*Plant first aid/problems*/
+.first-aid-problem {
+  margin: 2% 4% 0 0;
+  width: 45%;
+  float: left;
+}
+
+p.plant-problem {
+  padding: 0 0 2%;
+  font-weight: 700;
+}
+
+p.plant-answer {
+  padding: 2% 0;
+  /*border-bottom: 2px solid #2b5803;*/
+}
+
+/*************************************************************
+ * DISQUS >1200px
+ ********************************************************/
+
+section.disqus {
+  width: 100%;
+}
+
+section.disqus h3,
+section.disqus p {
+  text-align: center;
+}
+
+
+
+/*****************************************
+	FEATURED PLANT INDIVIDUAL PAGE
+ ********************************/
+
+.featured-plant-image {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.featured-plant-image img {
+  display: block;
+  margin: 5% auto;
+  padding: 1%;
+}
+
+.featured-plant-intro,
+.featured-plant-content {
+  width: 100%;
+}
+
+.about-content {
+  width: 50%;
+}

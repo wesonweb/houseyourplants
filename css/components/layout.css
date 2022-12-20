@@ -1,0 +1,24 @@
+.container,
+.content-container {
+  max-width: 64rem;
+  margin: auto;
+  padding: 1rem;
+}
+.content-container {
+  max-width: 48rem;
+}
+.grid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--gap, 1rem);
+  place-items: center;
+}
+
+.grid-item {
+  width: 100%;
+  height: 100%;
+  box-shadow: var(--box-shadow);
+  transition: all ease 0.4s;
+  padding: var(--p-sml);
+}

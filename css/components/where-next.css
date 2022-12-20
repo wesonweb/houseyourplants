@@ -1,0 +1,67 @@
+/************************************************************************
+	WHAT DO YOU WANT TO DO NOW STYLING
+ ************************************************************************/
+/*arrow styling for what now */
+
+img.arrow {
+  vertical-align: middle;
+  padding: 5px;
+}
+
+ul.where-now {
+  list-style-type: none;
+  text-align: center;
+  padding: 0;
+}
+
+ul.where-now li {
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+ul.where-now li a,
+a.search-link {
+  border-bottom: 2px solid var(--green);
+  padding: 8px;
+  transition: 0.4s ease;
+  font-size: var(--fs-200);
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  position: relative;
+}
+
+ul.where-now li a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleY(0);
+  height: 50px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--green);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+ul.where-now li a:hover::after {
+  transform: scaleY(1);
+  z-index: -1;
+  transform-origin: bottom left;
+}
+
+ul.where-now li a:first-child {
+  margin-right: 1rem;
+}
+
+ul.where-now li a:hover,
+ul.where-now li a:focus,
+a.search-link:hover {
+  color: var(--white);
+}
+
+/*error message when no plants found*/
+.no-plants-found {
+  clear: both;
+  width: 100%;
+}
