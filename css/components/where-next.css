@@ -57,6 +57,7 @@ ul.where-now li a:first-child {
 ul.where-now li a:hover,
 ul.where-now li a:focus,
 a.search-link:hover {
+  background-color: var(--green);
   color: var(--white);
 }
 

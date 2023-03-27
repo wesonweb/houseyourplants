@@ -7,8 +7,8 @@
 }
 
 .plant__taxonomy-items {
-  border-bottom: 3px solid #97acbf29;
-  border-top: 3px solid #97acbf29;
+  /* border-bottom: 3px solid #97acbf29; */
+  /* border-top: 3px solid #97acbf29; */
   padding: 2rem 0;
 }
 .plant__taxonomies span.room-list {
@@ -37,6 +37,7 @@
   transition: transform 0.25s ease-out;
 }
 .plant__taxonomy-items p a:hover {
+  background-color: var(--green);
   color: var(--white);
 }
 .plant__taxonomy-items p a:hover::after {
@@ -118,7 +119,7 @@
 @media(min-width: 700px) {
 
   .plant__taxonomies {
-    margin: 3rem auto;
+    margin: 1rem auto;
   }
 
   .single-plant__list {
