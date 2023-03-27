@@ -48,12 +48,12 @@
 
 						<section class="single-plant__quick-care">
 							<h3 class="section-title text-center">Quick care guide</h3>
-								<ul class="single-plant__list">
+								<ul class="single-plant__list icons">
 
 									<li class="single-plant__item">
 										<img src="<?php echo get_stylesheet_directory_uri(); 							?>/images/icons/sunshine.svg"
 										class="single-plant__icon"
-										alt="lighting icon" width="60" height="60" />
+										alt="lighting icon" width="42" height="42" />
 										<div class="plant-info">
                       <h3 class="single-plant__icon-title">Lighting</h3>
 										<p class="text-center"><?php the_field("lighting"); ?></p>
@@ -63,7 +63,7 @@
 									<li class="single-plant__item">
 										<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icons/watering.svg"
 										class="single-plant__icon"
-										alt="watering icon" width="60" height="60" />
+										alt="watering icon" width="42" height="42" />
 										<div class="plant-info">
 											<h3 class="single-plant__icon-title">Watering</h3>
 											<p class="text-center"><?php the_field("watering"); ?></p>
@@ -74,7 +74,7 @@
                   <li class="single-plant__item">
                     <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icons/humidity.svg"
                     class="single-plant__icon"
-                    alt="humidity icon" width="60" height="60" />
+                    alt="humidity icon" width="42" height="42" />
                     <div class="plant-info">
                       <h3 class="single-plant__icon-title">Humidity</h3>
                       <p class="text-center"><?php the_field("humidity"); ?></p>
@@ -85,7 +85,7 @@
                   <li class="single-plant__item">
                     <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icons/feeding.svg"
                     class="single-plant__icon"
-                    alt="feeding icon" width="60" height="60" />
+                    alt="feeding icon" width="42" height="42" />
                     <div class="plant-info">
                       <h3 class="single-plant__icon-title">Feeding</h3>
                       <p class="text-center"><?php the_field("feeding"); ?></p>
@@ -96,7 +96,7 @@
                   <li class="single-plant__item">
                     <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icons/temperature.svg"
                     class="single-plant__icon"
-                    alt="temperature icon" width="60" height="60" />
+                    alt="temperature icon" width="42" height="42" />
                     <div class="plant-info">
                       <h3 class="single-plant__icon-title">Temperature</h3>
                       <p class="text-center"><?php the_field("temperature"); ?>
@@ -107,7 +107,7 @@
                   <li class="single-plant__item">
                     <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/icons/pests.svg"
                     class="single-plant__icon"
-                    alt="pest icon" width="60" height="60" />
+                    alt="pest icon" width="42" height="42" />
                     <div class="plant-info">
                       <h3 class="single-plant__icon-title">Pests</h3>
                       <p class="text-center"><?php the_field("quick-care_pests"); ?></p>

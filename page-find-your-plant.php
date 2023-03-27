@@ -5,14 +5,14 @@
 <?php endwhile;
 endif; ?>
 	<div class="find-your-plant" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/houseplant.jpg)">
-    <div class="find-your-plant-container bg--dark br--md">
-      <div class="plantfinder-intro ">
+    <div class="find-your-plant-container  br--md">
+      <div class="plantfinder-intro bg--dark ">
           <div class="plantfinder-intro__content">
             <h2 class="text-white text-center">Find a plant</h2>
             <p class="text-white">Use the plant finder below to search for your plant by room, location and how hard or easy you'd like it to be to look after</p>
           </div>
         </div>
-      <form method="POST" action="../find-your-plant-search" id="plant-searchform" class="searchform">
+      <form method="POST" action="../find-your-plant-search" id="plant-searchform" class="searchform bg--dark">
         <div class="searchform-contents clearfix">
           <!-- choose a room -->
           <div class="room-choice">
