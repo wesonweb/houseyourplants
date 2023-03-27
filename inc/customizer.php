@@ -2,7 +2,7 @@
 /**
  * vanilla theme Theme Customizer
  *
- * @package vanilla_theme
+ * @package hyp_theme
  */
 
 /**

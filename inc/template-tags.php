@@ -4,7 +4,7 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package vanilla_theme
+ * @package hyp_theme
  */
 
 if ( ! function_exists( 'vanilla_posted_on' ) ) :

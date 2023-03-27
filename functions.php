@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package vanilla_theme
+ * @package hyp_theme
  */
 
 if ( ! function_exists( 'vanilla_setup' ) ) :
@@ -152,20 +152,6 @@ add_action( 'widgets_init', 'vanilla_widgets_init' );
 /**
  * Enqueue scripts and styles.
  */
-// function vanilla_scripts() {
-
-// 	// wp_enqueue_style( 'normalise', get_template_directory_uri() . '/css/normalise.css' );
-
-// 	wp_enqueue_style( 'vanilla-style', get_stylesheet_uri() );
-
-
-
-
-// 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-// 		wp_enqueue_script( 'comment-reply' );
-// 	}
-// }
-// add_action( 'wp_enqueue_scripts', 'vanilla_scripts' );
 
 
 function vanilla_register_styles(){
@@ -252,25 +238,25 @@ Copyright for footer: automatically updates every year
 ************************************************************************/
 
 function theme_copyright() {
-global $wpdb;
-$copyright_dates = $wpdb->get_results("
-SELECT
-YEAR(min(post_date_gmt)) AS firstdate,
-YEAR(max(post_date_gmt)) AS lastdate
-FROM
-$wpdb->posts
-WHERE
-post_status = 'publish'
-");
-$output = '';
-if($copyright_dates) {
-$copyright = "&copy; " . $copyright_dates[0]->firstdate;
-if($copyright_dates[0]->firstdate != $copyright_dates[0]->lastdate) {
-$copyright .= '-' . $copyright_dates[0]->lastdate;
-}
-$output = $copyright;
-}
-return $output;
+  global $wpdb;
+  $copyright_dates = $wpdb->get_results("
+    SELECT
+    YEAR(min(post_date_gmt)) AS firstdate,
+    YEAR(max(post_date_gmt)) AS lastdate
+    FROM
+    $wpdb->posts
+    WHERE
+    post_status = 'publish'
+    ");
+  $output = '';
+  if($copyright_dates) {
+  $copyright = "&copy; " . $copyright_dates[0]->firstdate;
+  if($copyright_dates[0]->firstdate != $copyright_dates[0]->lastdate) {
+  $copyright .= '-' . $copyright_dates[0]->lastdate;
+  }
+  $output = $copyright;
+  }
+  return $output;
 }
 
 /****************************************

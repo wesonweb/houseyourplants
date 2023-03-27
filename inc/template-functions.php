@@ -2,7 +2,7 @@
 /**
  * Functions which enhance the theme by hooking into WordPress
  *
- * @package vanilla_theme
+ * @package hyp_theme
  */
 
 /**

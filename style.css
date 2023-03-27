@@ -4,7 +4,7 @@ Theme URI:
 Author: wes
 Author URI: wesleymehaffy.co.uk
 Description: houseyourplants website
-Version: 2.4.0
+Version: 2.4.1
 
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
@@ -276,8 +276,9 @@ html {
   box-sizing: border-box;
 }
 
-body {
+body, #page {
   background: #fefcf2; /* Fallback for when there is no custom background color defined. */
+  min-height: 100vh;
 }
 
 .content-container {
@@ -286,14 +287,20 @@ body {
 }
 
 .site-header {
-  clear: both;
-  position: relative;
+  /* position: relative; */
 }
 
 .heading-container {
   width: 100%;
+  min-height: 20vh;
 }
 
+#content {
+  min-height: 60vh;
+}
+#colophon {
+  min-height: 20vh;
+}
 *,
 *:before,
 *:after {
@@ -1274,27 +1281,6 @@ p.scientific-name {
 	FIND YOUR PLANT PAGE
  ***********************************************************************/
 
-/* .find-your-plant-container {
-  margin-top: 50px;
-}
-
-
-.plantfinder-intro__standfirst {
-  max-width: 500px;
-  margin: 3rem auto;
-}
-
-.plantfinder-intro > div {
-  background-color: rgba(0, 0, 0, 0.65);
-  padding: 2rem 1rem;
-}
-.plantfinder-intro > div h2 span,
-.plantfinder-intro > div p {
-  margin-bottom: 1rem;
-  color: var(--white);
-  text-align: center;
-  letter-spacing: 2px;
-} */
 
 form {
   max-width: 100%;

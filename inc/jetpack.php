@@ -4,7 +4,7 @@
  *
  * @link https://jetpack.com/
  *
- * @package vanilla_theme
+ * @package hyp_theme
  */
 
 /**
