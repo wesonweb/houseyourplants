@@ -279,6 +279,8 @@ html {
 body, #page {
   background: #fefcf2; /* Fallback for when there is no custom background color defined. */
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .content-container {
@@ -286,19 +288,13 @@ body, #page {
   margin: auto;
 }
 
-.site-header {
-  /* position: relative; */
-}
-
 .heading-container {
   width: 100%;
   /* min-height: 20vh; */
 }
 
-#content {
-  /* min-height: 60vh; */
-}
 #colophon {
+  margin-top: auto;
   /* min-height: 20vh; */
 }
 *,
