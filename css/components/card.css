@@ -51,6 +51,17 @@
   clip-path: polygon(0 1%, 75% 0%, 100% 0, 100% 100%, 0 92%, 0 52%);
 }
 
+.off-screen {
+ /* transform: translateX(-3000px); */
+  opacity: 0;
+  transition: 0.45s ease-in;
+}
+.results-link-image:hover .off-screen {
+  opacity: 1;
+}
+.results-link-image:hover h2 {
+  color: var(--dark-purple);
+}
 @media (min-width: 600px) {
   .plant-container ul {
     display: flex;

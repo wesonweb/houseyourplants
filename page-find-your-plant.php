@@ -1,11 +1,8 @@
 <?php /* Template Name: Find Your Plant */ ?>
 <?php get_header(); ?>
 <!-- content START -->
-<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-<?php endwhile;
-endif; ?>
 	<div class="find-your-plant" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/houseplant.jpg)">
-    <div class="find-your-plant-container  br--md">
+    <div class="find-your-plant-container br--md">
       <div class="plantfinder-intro bg--dark ">
           <div class="plantfinder-intro__content">
             <h2 class="text-white text-center">Find a plant</h2>

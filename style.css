@@ -4,7 +4,7 @@ Theme URI:
 Author: wes
 Author URI: wesleymehaffy.co.uk
 Description: houseyourplants website
-Version: 2.4.3
+Version: 2.4.5
 
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
@@ -167,12 +167,9 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 .p-sm {
   padding: 1rem;
 }
-
-
-
-
-
-
+.ms-2 {
+  margin-left: 2rem;
+}
 html {
   scroll-behavior: smooth;
 }
@@ -426,13 +423,6 @@ h2.plant-title {
   margin: 0;
 }
 
-/* .plant-intro-section h2.plant-title,
-.plant-intro-section span.scientific-name {
-  text-align: center;
-  display: block;
-  font-weight: normal;
-} */
-
 h2.entry-title {
   padding: 1rem 0;
 }
@@ -534,11 +524,7 @@ p.scientific-name {
 
 } /*end media query */
 
-@media (min-width: 710px) {
-  h3 {
-    /* font-size: 1.5em; */
-  }
-} /*end media query */
+
 
 @media (min-width: 850px) {
   h2 {
@@ -555,8 +541,6 @@ p.scientific-name {
 @media (min-width: 1020px) {
 
   h2 {
-    /* font-size: 1.5em; */
-    /*padding-bottom: 1%;*/
     font-weight: 700;
   }
 
@@ -892,31 +876,6 @@ a:hover,
 a:active {
   outline: 0;
 }
-
-/* a.button,
-a.button:visited,
-input[type="submit"] {
-  margin: 1rem 0;
-  text-align: center;
-  max-width: 250px;
-  padding: 8px 12px;
-  background-color: var(--green);
-  border: 0;
-  display: block;
-  color: var(--white);
-  cursor: pointer;
-  font-size: var(--fs-200);
-  transition: 0.35s ease-in;
-  border-radius: var(--br);
-  letter-spacing: 1px;
-}
-
-a.button:hover,
-a.button:active,
-a.button:focus,
-input[type="submit"]:hover {
-  background-color: var(--purple);
-} */
 
 /* hide border bottom on logo */
 a#logo {
@@ -1409,10 +1368,6 @@ img.secondary-plant-image {
 /***************************************************************
 	INDIVIDUAL PLANT POSTS - QUICK CARE SECTION
  *********************************************************************/
-/* .quick-care-info {
-  margin-bottom: 3rem;
-  flex-basis: 50%;
-} */
 
 img.quick-care-icon {
   display: block;
@@ -1426,10 +1381,6 @@ img.quick-care-icon {
 /**************************************************************
  INDIVIDUAL PLANT POSTS - QUICK CARE GUIDE
 ************************************************************************/
-
-
-
-
 
 .detailed-care-info {
   padding-left: 0;
@@ -1454,28 +1405,6 @@ p.plant-answer {
 
 /*end media query */
 
-@media (min-width: 1000px) {
-
-
-
-  /* img.main-plant-image,
-  img.secondary-plant-image,
-  .plant-description-info {
-    width: 100%;
-  }
-  .plant-description-info {
-    margin-top: 25px;
-  }
-  .chosen-plant-summary p {
-    font-family: Lato;
-    width: 95%;
-    color: #2e3837;
-    max-width: 1240px;
-    margin: 0 auto;
-    padding: 1em 0;
-  } */
-
-} /*end media query */
 
 
 
@@ -1666,13 +1595,7 @@ ul.detailed-care-info {
     margin: 5% auto;
     text-align: center;
   }
-  .welcome-message {
-    /* width: 50%; */
-  }
-  /*fixes bug with a.button link collapsing*/
-  /* .featured-plant a {
-    clear: left;
-  } */
+
 
 
   form select {
@@ -1742,18 +1665,6 @@ ul.detailed-care-info {
 /**********************************************************************
 	INDIVIDUAL PLANT POSTS - ROOM/POSITON/CARE-LEVEL INFO >650px
  ******************************************************************************/
-.main-plant-image-container {
-  /* width: 100%;
-  display: block;
-  margin: 0;
-  padding: 0; */
-}
-
-.main-plant-image-container .main-plant-image {
-  /* display: block;
-  margin: auto; */
-  /*width: 75%;*/
-}
 
 .chosen-plant-summary p {
   padding: 2% 0;
@@ -1849,16 +1760,6 @@ select{
   margin: 5% auto 0;
 }
 
-
-
-
-/*Plant first aid/problems*/
-.first-aid-problem {
-  /* margin: 2% 4% 0 0; */
-  /* width: 45%; */
-  /* float: left; */
-}
-
 p.plant-problem {
   padding: 0 0 2%;
   font-weight: 700;
@@ -1866,7 +1767,6 @@ p.plant-problem {
 
 p.plant-answer {
   padding: 2% 0;
-  /*border-bottom: 2px solid #2b5803;*/
 }
 
 /*************************************************************

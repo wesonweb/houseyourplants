@@ -57,6 +57,9 @@
     align-items: center;
     margin: 0 auto 0;
   }
+  .find-your-plant {
+    padding: 250px 0;
+  }
 }
 @media (min-width: 1200px) {
   .searchform-contents {
