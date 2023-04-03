@@ -1401,7 +1401,7 @@ img.secondary-plant-image {
 }
 
 .main-plant__name {
-  margin-top: 1rem;
+  margin: 1rem 0;
 }
 /*********************************************************************
 	INDIVIDUAL PLANT POSTS - ROOM/POSITON/CARE-LEVEL INFO
@@ -1858,9 +1858,9 @@ select{
 
 /*Plant first aid/problems*/
 .first-aid-problem {
-  margin: 2% 4% 0 0;
-  width: 45%;
-  float: left;
+  /* margin: 2% 4% 0 0; */
+  /* width: 45%; */
+  /* float: left; */
 }
 
 p.plant-problem {
